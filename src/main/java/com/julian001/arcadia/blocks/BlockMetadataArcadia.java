@@ -36,6 +36,7 @@ public class BlockMetadataArcadia extends Block {
 		return meta;
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void getSubBlocks(Item item, CreativeTabs creativeTabs, List list) {
 		for(int i = 0; i < maxMeta; i++) {

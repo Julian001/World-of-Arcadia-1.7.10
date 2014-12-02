@@ -61,6 +61,7 @@ public class WorldGeneratorArcadia implements IWorldGenerator {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	private void addOreSpawn(Block block, int metadata, World world, Random random, int blockXPos, int blockZPos, int minVeinSize, int maxVeinSize, int chanceToSpawn, int minY, int maxY)
 	{
 		for(int i = 0; i < chanceToSpawn; i++) {

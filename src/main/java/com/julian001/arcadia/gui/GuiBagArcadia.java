@@ -36,33 +36,49 @@ public class GuiBagArcadia extends GuiContainer {
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
 	         InventoryBagArcadia inventoryBagArcadia = ((ContainerBagArcadia) inventorySlots).inventoryBagArcadia;
 	         String s = inventoryBagArcadia.hasCustomInventoryName() ? inventoryBagArcadia.getInventoryName() : I18n.format(inventoryBagArcadia.getInventoryName());
-	         this.fontRendererObj.drawString(s, this.xSize / 2, 0, 0x404040);
-	         this.fontRendererObj.drawString(I18n.format("container.inventory"), 8, 102, 0x404040);
+	         int titleX;
+	         if(inventoryBagArcadia.getSizeInventory() == 9) {
+	        	 titleX = this.xSize / 2 - this.fontRendererObj.getStringWidth(s) / 2;
+	         }
+	         else {
+	        	 titleX = 8;
+	         }
+	         this.fontRendererObj.drawString(s, titleX, 6, 4210752);
+	         this.fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), 8, this.ySize - 96 + 2, 4210752);
 	}
 	
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_, int p_146976_3_) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
+		System.out.println(((ContainerBagArcadia) inventorySlots).inventoryBagArcadia.getSizeInventory());
         switch(((ContainerBagArcadia) inventorySlots).inventoryBagArcadia.getSizeInventory()) {
         	case 9: this.mc.renderEngine.bindTexture(guiSmall); break;
         	case 27: this.mc.renderEngine.bindTexture(guiMedium); break;
         	case 54: this.mc.renderEngine.bindTexture(guiLarge); break;
         	//default: this.mc.renderEngine.bindTexture(guiSmall);
         }
-		
         int k = (this.width - this.xSize) / 2;
         int l = (this.height - this.ySize) / 2;
-        
         this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
         
-        //drawPlayerModel(k + 51, l + 75, 30, (float)(k + 51) - this.xSize_lo, (float)(l + 75 - 50) - this.ySize_lo, this.mc.thePlayer);
-        drawPlayerModel(k - 21, l + 135 - 58, 30, (float)(k + 51) - this.mouseX, (float)(l + 75 - 50) - this.mouseY, this.mc.thePlayer);
+        int playerModelX = 0, playerModelY = 0;
+        switch(((ContainerBagArcadia) inventorySlots).inventoryBagArcadia.getSizeInventory()) {
+        	case 9: playerModelX = k - 20; playerModelY = l + 136 - 58;break;
+        	case 27: playerModelX = k - 20; playerModelY = l + 136 - 58;break;
+        	case 54: playerModelX = k - 20; playerModelY = l + 136 - 4;break;
+        }
+        drawPlayerModel(playerModelX, playerModelY, 30, (float)(k + 51) - this.mouseX, (float)(l + 75 - 50) - this.mouseY, this.mc.thePlayer);
 	}
 	
 	@Override
 	public void initGui() {
-		if(((ContainerBagArcadia) inventorySlots).inventoryBagArcadia.getSizeInventory() == 54) {
+		int sizeInventory = ((ContainerBagArcadia) inventorySlots).inventoryBagArcadia.getSizeInventory();
+		if(sizeInventory == 27) {
+			xSize = 176;
+			ySize = 168;
+		}
+		if(sizeInventory == 54) {
 			xSize = 176;
 			ySize = 222;
 		}

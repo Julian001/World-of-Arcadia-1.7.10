@@ -1,6 +1,5 @@
 package com.julian001.arcadia.inventory;
 
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -26,33 +25,40 @@ public class ContainerBagArcadia extends Container {
 			case 9: 
 				for(int y = 0; y < 3; y++) {
 					for(int x = 0; x < 3; x++) {
-						this.addSlotToContainer(new Slot(inventoryBagArcadia, x + y * 3, x, y));
+						this.addSlotToContainer(new Slot(inventoryBagArcadia, x + y * 3, x * 18 + 62, y * 18 + 17));
 					}
 				}
 				break;
 			case 27: 
 				for(int y = 0; y < 3; y++) {
 					for(int x = 0; x < 9; x++) {
-						this.addSlotToContainer(new Slot(inventoryBagArcadia, x + y * 9, x, y ));
+						this.addSlotToContainer(new Slot(inventoryBagArcadia, x + y * 9, x * 18 + 8, y * 18 + 18));
 					}
 				}
 				break;
 			case 54: 
 				for(int y = 0; y < 6; y++) {
 					for(int x = 0; x < 9; x++) {
-						this.addSlotToContainer(new Slot(inventoryBagArcadia, x + y * 9, x, y));
+						this.addSlotToContainer(new Slot(inventoryBagArcadia, x + y * 9, x * 18 + 8, y * 18 + 18));
 					}
 				}
 				break;
 		}
-				
+		
+		int playerX = 0,playerY = 0;
+		
+		switch(inventoryBagArcadia.getSizeInventory()){
+			case 9: playerX = PLAYER_INV_X_DEFAULT; playerY = PLAYER_INV_Y_DEFAULT;break;
+			case 27: playerX = PLAYER_INV_X_DEFAULT; playerY = PLAYER_INV_Y_DEFAULT + 2;break;
+			case 54: playerX = PLAYER_INV_X_DEFAULT; playerY = PLAYER_INV_Y_DEFAULT + 56;break;
+		}
 		for(int y = 0; y < 3; y++) {
 			for(int x = 0; x < 9; x++) {
-				this.addSlotToContainer( new PlayerSlot(inventoryPlayer, x + y * 9 + 9, PLAYER_INV_X_DEFAULT + x * SLOT_HEIGHT, PLAYER_INV_Y_DEFAULT + y * SLOT_HEIGHT, allItemInvs));
+				this.addSlotToContainer( new PlayerSlot(inventoryPlayer, x + y * 9 + 9, playerX + x * SLOT_HEIGHT, playerY + y * SLOT_HEIGHT, allItemInvs));
 			}
 		}
 		for (int k = 0; k < 9; k++) {
-			this.addSlotToContainer( new PlayerSlot(inventoryPlayer, k, PLAYER_INV_X_DEFAULT + k * 18, PLAYER_INV_Y_DEFAULT + 58, allItemInvs));
+			this.addSlotToContainer( new PlayerSlot(inventoryPlayer, k, playerX + k * 18, playerY + 58, allItemInvs));
 		}
 	}
 	

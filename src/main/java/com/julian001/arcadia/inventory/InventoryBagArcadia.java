@@ -16,26 +16,15 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class InventoryBagArcadia implements IInventory {
 
-	static final String NBT_UUID_KEY = "_sc$iteminv$uuid";
-	private static final String NBT_KEY = "_sc$inventory";
 	final UUID uuid = UUID.randomUUID();
 	private final ItemStack itemStack;
 	private final String nbtKey;	
-	private int size;
-	ItemStack[] inventoryItemStack = new ItemStack[size];
-	public InventoryBagArcadia(ItemStack itemStack, String nbtKey) {
-		super();
-		this.itemStack = itemStack;
-		this.nbtKey = nbtKey;
-		writeUUID();
-		readFromNbt(getNbt());
-	}
-	
+	ItemStack[] inventoryItemStack;
 	public InventoryBagArcadia(int size, ItemStack itemStack, String nbtKey) {
 		super();
 		this.itemStack = itemStack;
 		this.nbtKey = nbtKey;
-		this.size = size;
+		this.inventoryItemStack = new ItemStack[size];
 		writeUUID();
 		readFromNbt(getNbt());
 	}
@@ -121,7 +110,6 @@ public class InventoryBagArcadia implements IInventory {
 
 	@Override
 	public void markDirty() {
-		markDirty();
 		saveData();		
 	}
 
@@ -137,7 +125,7 @@ public class InventoryBagArcadia implements IInventory {
 	public void closeInventory() {
 		closeInventory();
 		if(itemStack.stackTagCompound != null) {
-			itemStack.stackTagCompound.removeTag(NBT_UUID_KEY);
+			itemStack.stackTagCompound.removeTag(References.ID + ".bagUUID");
 		}
 	}
 
@@ -175,7 +163,7 @@ public class InventoryBagArcadia implements IInventory {
 	}
 	
 	public void readFromNbt(NBTTagCompound nbt) {
-		NBTTagList nbtList = nbt.getTagList(NBT_KEY, Constants.NBT.TAG_COMPOUND);
+		NBTTagList nbtList = nbt.getTagList(nbtKey, Constants.NBT.TAG_COMPOUND);
 		int invSize = inventoryItemStack.length;
 		int listLen = nbtList.tagCount();
 		for (int i = 0; i < listLen; i++) {
