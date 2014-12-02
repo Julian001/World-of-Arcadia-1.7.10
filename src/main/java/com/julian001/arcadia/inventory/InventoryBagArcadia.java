@@ -17,7 +17,7 @@ public class InventoryBagArcadia implements IInventory {
 
 	final UUID uuid = UUID.randomUUID();
 	private final ItemStack itemStack;
-	private final String nbtKey = References.ID + "bagNbtKey";
+	public final static String nbtKey = References.ID + "bagNbtKey";
 	private EntityPlayer player;
 	ItemStack[] inventoryItemStack;
 	public InventoryBagArcadia(int size, ItemStack itemStack, EntityPlayer player) {
@@ -126,21 +126,15 @@ public class InventoryBagArcadia implements IInventory {
 	}
 
 	private final void saveData() {
-		if(!player.worldObj.isRemote) {
-			writeToNbt(getNbt());
-			player.inventory.setInventorySlotContents(player.inventory.currentItem, itemStack);
-			System.out.println("saveData");
-		}
+		writeToNbt(getNbt());
+		player.inventory.setInventorySlotContents(player.inventory.currentItem, itemStack);
 	}
 		
 	private NBTTagCompound getNbt() {
 		if (itemStack.stackTagCompound == null) {
 			   itemStack.stackTagCompound = new NBTTagCompound();
 			}
-		if (!itemStack.stackTagCompound.hasKey(nbtKey)) {
-		   itemStack.stackTagCompound.setTag(nbtKey, new NBTTagCompound());
-		}
-		return itemStack.stackTagCompound.getCompoundTag(nbtKey);
+		return itemStack.stackTagCompound;
 	}
 	
 	public void writeToNbt(NBTTagCompound nbt) {

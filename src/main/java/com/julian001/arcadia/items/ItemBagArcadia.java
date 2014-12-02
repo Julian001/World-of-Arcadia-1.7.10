@@ -1,12 +1,17 @@
 package com.julian001.arcadia.items;
 
+import java.util.List;
+
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants;
 
 import com.julian001.arcadia.arcadia;
+import com.julian001.arcadia.inventory.InventoryBagArcadia;
 import com.julian001.arcadia.lib.GUIs;
 import com.julian001.arcadia.lib.References;
 
@@ -61,5 +66,20 @@ public class ItemBagArcadia extends ItemMetadataArcadia{
 			entityPlayer.openGui(arcadia.instance, GUIs.BAG.ordinal(), world, itemStack.getItemDamage(), 0, 0);
 		}
 		return itemStack;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean i) {
+		NBTTagList nbtList =  itemStack.stackTagCompound.getTagList(InventoryBagArcadia.nbtKey, Constants.NBT.TAG_COMPOUND);
+		int k = nbtList.tagCount();
+		int l = 0;
+		switch(itemStack.getItemDamage()) {
+			case 0: l = 9;break;
+			case 1: l = 27;break;
+			case 2: l = 54;break;
+		}
+		list.add("");
+		list.add("§9Slots: " + k + "/" + l);
 	}
 }
