@@ -82,6 +82,7 @@ public class BlockSlabArcadia extends BlockSlab
 		return meta;
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void getSubBlocks(Item item, CreativeTabs creativeTabs, List list) {
 		for(int i = 0; i < maxMeta; i++) {

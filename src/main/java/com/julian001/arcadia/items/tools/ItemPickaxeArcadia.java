@@ -1,8 +1,6 @@
 package com.julian001.arcadia.items.tools;
 
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemPickaxe;
-
 import com.julian001.arcadia.arcadia;
 import com.julian001.arcadia.lib.References;
 

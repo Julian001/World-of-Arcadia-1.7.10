@@ -2,19 +2,18 @@ package com.julian001.arcadia.items.tools;
 
 import java.util.Set;
 
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+
 import com.google.common.collect.Sets;
-import com.julian001.arcadia.arcadia;
 import com.julian001.arcadia.blocks.BlocksArcadia;
 import com.julian001.arcadia.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 
 public class ItemMysticalGloveArcadia extends ItemOmniToolArcadia {
 
-	static Set blocksEffectiveAgainst = Sets.newHashSet(new Block[] {
+	private static Set<Block> blocksEffectiveAgainst = Sets.newHashSet(new Block[] {
 			Blocks.cobblestone,	Blocks.double_stone_slab, Blocks.stone_slab, Blocks.stone,
 			Blocks.sandstone, Blocks.mossy_cobblestone, Blocks.iron_ore, Blocks.iron_block,
 			Blocks.coal_ore, Blocks.gold_block, Blocks.gold_ore, Blocks.diamond_ore, 

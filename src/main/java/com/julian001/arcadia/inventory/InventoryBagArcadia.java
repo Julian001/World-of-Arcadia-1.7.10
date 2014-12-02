@@ -126,9 +126,11 @@ public class InventoryBagArcadia implements IInventory {
 	}
 
 	private final void saveData() {
-		writeToNbt(getNbt());
-		player.inventory.setInventorySlotContents(player.inventory.currentItem, itemStack);
-		System.out.println("saveData");
+		if(!player.worldObj.isRemote) {
+			writeToNbt(getNbt());
+			player.inventory.setInventorySlotContents(player.inventory.currentItem, itemStack);
+			System.out.println("saveData");
+		}
 	}
 		
 	private NBTTagCompound getNbt() {
@@ -164,7 +166,7 @@ public class InventoryBagArcadia implements IInventory {
 		
 			ItemStack item = ItemStack.loadItemStackFromNBT(itemCompound);
 			int idx = itemCompound.getInteger("slot");
-			if (idx < invSize && idx > 0) {
+			if (idx < invSize && idx >= 0) {
 				inventoryItemStack[idx] = item;
 			}
 		}

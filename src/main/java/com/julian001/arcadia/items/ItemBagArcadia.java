@@ -1,5 +1,11 @@
 package com.julian001.arcadia.items;
 
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
+import net.minecraft.world.World;
+
 import com.julian001.arcadia.arcadia;
 import com.julian001.arcadia.lib.GUIs;
 import com.julian001.arcadia.lib.References;
@@ -7,11 +13,6 @@ import com.julian001.arcadia.lib.References;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 
 public class ItemBagArcadia extends ItemMetadataArcadia{
 

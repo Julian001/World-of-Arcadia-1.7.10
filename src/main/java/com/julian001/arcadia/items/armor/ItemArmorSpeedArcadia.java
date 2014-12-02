@@ -7,9 +7,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 import com.julian001.arcadia.items.ItemsArcadia;
-import com.julian001.arcadia.lib.References;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemArmorSpeedArcadia extends ItemArmorArcadia {
 

@@ -1,12 +1,12 @@
 package com.julian001.arcadia.blocks;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockStairs;
+
 import com.julian001.arcadia.arcadia;
 import com.julian001.arcadia.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockStairsArcadia extends BlockStairs {
 

@@ -1,12 +1,10 @@
 package com.julian001.arcadia.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 
 import com.julian001.arcadia.items.ItemBlockSlabArcadia;
 import com.julian001.arcadia.items.ItemBlockSlabArcadia2;
-import com.julian001.arcadia.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

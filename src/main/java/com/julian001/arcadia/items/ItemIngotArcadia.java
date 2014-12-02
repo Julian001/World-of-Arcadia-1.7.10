@@ -1,18 +1,14 @@
 package com.julian001.arcadia.items;
 
-import java.util.List;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 
-import com.julian001.arcadia.arcadia;
 import com.julian001.arcadia.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
 
 public class ItemIngotArcadia extends ItemMetadataArcadia {
 	

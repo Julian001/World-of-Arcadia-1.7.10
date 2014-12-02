@@ -5,7 +5,6 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
@@ -60,7 +59,8 @@ public class ItemShearsArcadia extends ItemArcadia {
     /**
      * Gets a map of item attribute modifiers, used by ItemSword to increase hit damage.
      */
-    public Multimap getItemAttributeModifiers()
+    @SuppressWarnings({ "rawtypes", "unchecked", "deprecation" })
+	public Multimap getItemAttributeModifiers()
     {
         Multimap multimap = super.getItemAttributeModifiers();
         multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", (double)this.damage, 0));

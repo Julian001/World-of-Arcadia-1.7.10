@@ -1,11 +1,8 @@
 package com.julian001.arcadia.items.tools;
 
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemHoe;
-
 import com.julian001.arcadia.arcadia;
 import com.julian001.arcadia.lib.References;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemHoeArcadia extends ItemHoe {

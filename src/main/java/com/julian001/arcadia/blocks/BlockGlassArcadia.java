@@ -3,17 +3,8 @@ package com.julian001.arcadia.blocks;
 import java.util.Random;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.init.Blocks;
-import net.minecraft.util.Facing;
 import net.minecraft.world.IBlockAccess;
-
-import com.julian001.arcadia.arcadia;
-import com.julian001.arcadia.lib.References;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

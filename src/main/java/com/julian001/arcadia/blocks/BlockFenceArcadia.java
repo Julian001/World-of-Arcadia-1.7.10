@@ -1,17 +1,12 @@
 package com.julian001.arcadia.blocks;
 
+import net.minecraft.block.BlockFence;
+import net.minecraft.block.material.Material;
+
 import com.julian001.arcadia.arcadia;
-import com.julian001.arcadia.items.ItemBlockOreArcadia;
 import com.julian001.arcadia.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.world.IBlockAccess;
 
 public class BlockFenceArcadia extends BlockFence {
 

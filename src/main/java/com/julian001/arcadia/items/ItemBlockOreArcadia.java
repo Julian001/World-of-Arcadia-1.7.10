@@ -1,7 +1,6 @@
 package com.julian001.arcadia.items;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 public class ItemBlockOreArcadia extends ItemBlockArcadia {

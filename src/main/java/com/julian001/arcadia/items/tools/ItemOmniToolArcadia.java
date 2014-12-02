@@ -2,9 +2,6 @@ package com.julian001.arcadia.items.tools;
 
 import java.util.Set;
 
-import com.google.common.collect.Sets;
-import com.julian001.arcadia.arcadia;
-
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -14,11 +11,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
+
+import com.julian001.arcadia.arcadia;
+
 import cpw.mods.fml.common.eventhandler.Event.Result;
 
 public class ItemOmniToolArcadia extends ItemTool {
 	
-	protected ItemOmniToolArcadia(float dammage, ToolMaterial material, Set blocksEffectiveAgainst) {
+	protected ItemOmniToolArcadia(float dammage, ToolMaterial material, Set<Block> blocksEffectiveAgainst) {
 		super(dammage, material, blocksEffectiveAgainst );
 		setCreativeTab(arcadia.tabArcadiaItems);
 	}

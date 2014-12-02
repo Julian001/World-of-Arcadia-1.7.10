@@ -5,7 +5,6 @@ import com.julian001.arcadia.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemSpade;
-import net.minecraft.item.Item.ToolMaterial;
 
 public class ItemShovelArcadia extends ItemSpade {
 	

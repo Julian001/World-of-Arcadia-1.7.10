@@ -1,14 +1,8 @@
 package com.julian001.arcadia.tabs;
 
-import java.util.List;
-
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
 import com.julian001.arcadia.blocks.BlocksArcadia;
 import com.julian001.arcadia.items.ItemsArcadia;
 

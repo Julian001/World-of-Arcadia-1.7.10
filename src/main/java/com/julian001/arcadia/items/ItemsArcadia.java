@@ -81,24 +81,18 @@ public class ItemsArcadia {
 	public static Item arcadiaItem;
 	public static Item friedEgg;
 	public static Item ingotArcadia;
+	public static Item bagArcadia;
 	public static Item mysticalGolve;
 	
-	public static Item bagSmall;
-	public static Item bagMedium;
-	public static Item bagBig;
-	public static Item bagArcadia;
 	
 	public static void init() {
 		
 		arcadiaItem = new ItemArcadia("arcadiaItem");
 		friedEgg = new ItemFoodArcadia("friedEgg", 6, 2F, false);
 		ingotArcadia = new ItemIngotArcadia("ingotArcadia", 8);
+		bagArcadia = new ItemBagArcadia("bagArcadia", 3);
 		mysticalGolve = new ItemMysticalGloveArcadia("mysticalGolve", 7F, toolMYSTICAL);
 		
-		bagSmall = new ItemBagSmallArcadia("bagSmall");
-		bagMedium = new ItemBagMediumArcadia("bagMedium");
-		bagBig = new ItemBagBigArcadia("bagBig");
-		bagArcadia = new ItemBagArcadia("bagArcadia", 3);
 		
 		swordSilver = new ItemSwordArcadia("swordSilver", toolSILVER);
 		swordBronze = new ItemSwordArcadia("swordBronze", toolBRONZE);
