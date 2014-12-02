@@ -12,25 +12,21 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.nbt.NBTTagString;
 import net.minecraftforge.common.util.Constants;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class InventoryBagArcadia implements IInventory {
 
 	final UUID uuid = UUID.randomUUID();
 	private final ItemStack itemStack;
-	private final String nbtKey;	
+	private final String nbtKey = References.ID + "bagNbtKey";
+	private EntityPlayer player;
 	ItemStack[] inventoryItemStack;
-	public InventoryBagArcadia(int size, ItemStack itemStack, String nbtKey) {
+	public InventoryBagArcadia(int size, ItemStack itemStack, EntityPlayer player) {
 		super();
 		this.itemStack = itemStack;
-		this.nbtKey = nbtKey;
 		this.inventoryItemStack = new ItemStack[size];
+		this.player = player;
 		writeUUID();
 		readFromNbt(getNbt());
-	}
-		
-	public InventoryBagArcadia(int size, ItemStack itemStack) {
-		this(size, itemStack, defaultNBTKey(itemStack));
 	}
 	
 	private void writeUUID() {
@@ -39,12 +35,7 @@ public class InventoryBagArcadia implements IInventory {
 		}
 		itemStack.stackTagCompound.setString(References.ID + ".bagUUID", uuid.toString());
 	}
-	
-	private static String defaultNBTKey(ItemStack itemStack) {
-		GameRegistry.UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(itemStack.getItem());
-		return ui.modId + ":" + ui.name + ".inv";
-	}
-	
+		
 	@Override
 	public int getSizeInventory() {
 		return inventoryItemStack.length;
@@ -136,6 +127,8 @@ public class InventoryBagArcadia implements IInventory {
 
 	private final void saveData() {
 		writeToNbt(getNbt());
+		player.inventory.setInventorySlotContents(player.inventory.currentItem, itemStack);
+		System.out.println("saveData");
 	}
 		
 	private NBTTagCompound getNbt() {

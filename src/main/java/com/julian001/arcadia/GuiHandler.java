@@ -56,9 +56,9 @@ public class GuiHandler implements IGuiHandler {
 
 	public InventoryBagArcadia getInventory(int x, EntityPlayer player) {
 		switch(x) {
-			case 0: return new InventoryBagArcadia(9, player.getHeldItem());
-			case 1: return new InventoryBagArcadia(27, player.getHeldItem());
-			case 2: return new InventoryBagArcadia(54, player.getHeldItem());
+			case 0: return new InventoryBagArcadia(9, player.getHeldItem(), player);
+			case 1: return new InventoryBagArcadia(27, player.getHeldItem(), player);
+			case 2: return new InventoryBagArcadia(54, player.getHeldItem(), player);
 			default: return null;
 		}
 	}

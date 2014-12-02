@@ -51,7 +51,6 @@ public class GuiBagArcadia extends GuiContainer {
 	protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_, int p_146976_3_) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
-		System.out.println(((ContainerBagArcadia) inventorySlots).inventoryBagArcadia.getSizeInventory());
         switch(((ContainerBagArcadia) inventorySlots).inventoryBagArcadia.getSizeInventory()) {
         	case 9: this.mc.renderEngine.bindTexture(guiSmall); break;
         	case 27: this.mc.renderEngine.bindTexture(guiMedium); break;
