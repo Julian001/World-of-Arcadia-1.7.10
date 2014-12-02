@@ -15,6 +15,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = References.ID, name = References.NAME, version = References.VERSION)
@@ -32,7 +33,7 @@ public class arcadia
     public void preInit(FMLInitializationEvent event)
     {
 		GameRegistry.registerWorldGenerator(new WorldGeneratorArcadia(), 1);
-		//NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 		
 		BlocksArcadia.init();
 		ItemsArcadia.init();
