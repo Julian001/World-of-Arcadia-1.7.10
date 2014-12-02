@@ -1,0 +1,62 @@
+package com.julian001.arcadia.proxy;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.world.World;
+
+import com.julian001.arcadia.arcadia;
+import com.julian001.arcadia.gui.GuiBagBigArcadia;
+import com.julian001.arcadia.gui.GuiBagMediumArcadia;
+import com.julian001.arcadia.gui.GuiBagSmallArcadia;
+import com.julian001.arcadia.inventory.ContainerBagBigArcadia;
+import com.julian001.arcadia.inventory.ContainerBagMediumArcadia;
+import com.julian001.arcadia.inventory.ContainerBagSmallArcadia;
+import com.julian001.arcadia.inventory.InventoryBagBigArcadia;
+import com.julian001.arcadia.inventory.InventoryBagMediumArcadia;
+import com.julian001.arcadia.inventory.InventoryBagSmallArcadia;
+import com.julian001.arcadia.lib.GUIs;
+import com.julian001.arcadia.tileentities.TileEntityAnvilArcadia;
+
+import cpw.mods.fml.common.network.IGuiHandler;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class CommonProxy implements IGuiHandler{
+
+	public void registerTileEntities() {
+		 
+        GameRegistry.registerTileEntity(TileEntityAnvilArcadia.class, TileEntityAnvilArcadia.publicName);
+    }
+
+	public void initialize() {
+				
+	}
+	
+	@Override
+	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+	{
+		// Hooray, no 'magic' numbers - we know exactly which Gui this refers to
+		/*if (ID == arcadia.GUI_ITEM_INV)
+		{
+			// Use the player's held item to create the inventory
+			return new ContainerBagSmallArcadia(player, player.inventory, new InventoryBagSmallArcadia(player.getHeldItem()));
+		}*/
+		if(ID == GUIs.BAGSMALL.ordinal()) return new ContainerBagSmallArcadia(player, player.inventory, new InventoryBagSmallArcadia(player.getHeldItem()));
+		if(ID == GUIs.BAGMEDIUM.ordinal()) return new ContainerBagMediumArcadia(player, player.inventory, new InventoryBagMediumArcadia(player.getHeldItem()));
+		//if(ID == GUIs.BAGBIG.ordinal()) return new ContainerBagBigArcadia(player, player.inventory, new InventoryBagBigArcadia(player.getHeldItem()));
+		else return null;
+	}
+
+	@Override
+	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+	{
+		/*if (ID == arcadia.GUI_ITEM_INV)
+		{
+			// We have to cast the new container as our custom class
+			// and pass in currently held item for the inventory
+			return new GuiBagSmallArcadia((ContainerBagSmallArcadia) new ContainerBagSmallArcadia(player, player.inventory, new InventoryBagSmallArcadia(player.getHeldItem())));
+		}*/
+		if(ID == GUIs.BAGSMALL.ordinal()) return new GuiBagSmallArcadia((ContainerBagSmallArcadia) new ContainerBagSmallArcadia(player, player.inventory, new InventoryBagSmallArcadia(player.getHeldItem())));
+		if(ID == GUIs.BAGMEDIUM.ordinal()) return new GuiBagMediumArcadia((ContainerBagMediumArcadia) new ContainerBagMediumArcadia(player, player.inventory, new InventoryBagMediumArcadia(player.getHeldItem())));
+		//if(ID == GUIs.BAGBIG.ordinal()) return new GuiBagBigArcadia((ContainerBagBigArcadia) new ContainerBagBigArcadia(player, player.inventory, new InventoryBagBigArcadia(player.getHeldItem())));
+		else return null;
+	}
+}

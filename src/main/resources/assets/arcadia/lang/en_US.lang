@@ -1,0 +1,114 @@
+tile.arcadia_arcadiaBlock.name=Arcadia Test Block
+#Ore
+tile.arcadia_oreArcadia.Silver.name=Silver Ore
+tile.arcadia_oreArcadia.Copper.name=Copper Ore
+tile.arcadia_oreArcadia.Tin.name=Tin Ore
+tile.arcadia_oreArcadia.Lead.name=Lead Ore
+tile.arcadia_oreArcadia.Ruby.name=§cRuby Ore§r
+tile.arcadia_oreArcadia.Sapphire.name=§bSapphire Ore§r
+#Ore Blocks
+tile.arcadia_oreBlockArcadia.Silver.name=Block of Silver
+tile.arcadia_oreBlockArcadia.Copper.name=Block of Copper 
+tile.arcadia_oreBlockArcadia.Tin.name=Block of Tin
+tile.arcadia_oreBlockArcadia.Lead.name=Block of Lead
+tile.arcadia_oreBlockArcadia.Ruby.name=§cBlock of Ruby§r
+tile.arcadia_oreBlockArcadia.Sapphire.name=§bBlock of Sapphire§r
+tile.arcadia_oreBlockArcadia.Bronze.name=Block of Bronze
+#Stairs
+tile.arcadia_stairSilver.name=Silver Stair
+tile.arcadia_stairCopper.name=Copper Stair
+tile.arcadia_stairTin.name=Tin Stair
+tile.arcadia_stairLead.name=Lead Stair
+tile.arcadia_stairRuby.name=§cRuby Stair§r
+tile.arcadia_stairSapphire.name=§bSapphire Stair§r
+tile.arcadia_stairBronze.name=Bronze Stair
+#Slabs
+tile.arcadia_slabSilver.name=Silver Slab
+tile.arcadia_slabCopper.name=Copper Slab
+tile.arcadia_slabTin.name=Tin Slab
+tile.arcadia_slabLead.name=Lead Slab
+tile.arcadia_slabRuby.name=§cRuby Slab§r
+tile.arcadia_slabSapphire.name=§bSapphire Slab§r
+tile.arcadia_slabBronze.name=Bronze Slab
+#Fences
+tile.arcadia_fenceSilver.name=Silver Fence
+tile.arcadia_fenceCopper.name=Copper Fence
+tile.arcadia_fenceTin.name=Tin Fence
+tile.arcadia_fenceLead.name=Lead Fence
+tile.arcadia_fenceRuby.name=§cRuby Fence§r
+tile.arcadia_fenceSapphire.name=§bSapphire Fence§r
+tile.arcadia_fenceBronze.name=Bronze Fence
+
+tile.arcadia_anvil.name=Anvil
+tile.arcadia_clearGlass.name=Clear Glass
+
+item.arcadia_arcadiaItem.name=Arcadia Test Item
+item.arcadia_friedEgg.name=Fried Egg
+item.arcadia_mysticalFist.name=§3§lMystical Glove§r
+#Bags
+item.arcadia_bagArcadia.bagSmall.name=Small Bag
+item.arcadia_bagArcadia.bagMedium.name=Medium Bag
+item.arcadia_bagArcadia.bagLarge.name=Large Bag
+#Ingots
+item.arcadia_ingotArcadia.ingotSilver.name=Silver Ingot
+item.arcadia_ingotArcadia.ingotCopper.name=Copper Ingot
+item.arcadia_ingotArcadia.ingotTin.name=Tin Ingot
+item.arcadia_ingotArcadia.ingotLead.name=Lead Ingot
+item.arcadia_ingotArcadia.gemRuby.name=§cRuby§r
+item.arcadia_ingotArcadia.gemSapphire.name=§bSapphire§r
+item.arcadia_ingotArcadia.ingotBronze.name=Bronze Ingot
+item.arcadia_ingotArcadia.blankBronze.name=Blank Bronze
+#Swords
+item.arcadia_swordSilver.name=Silver Sword
+item.arcadia_swordBronze.name=Bronze Sword
+item.arcadia_swordRuby.name=§cRuby Sword§r
+item.arcadia_swordSapphire.name=§bSapphire Sword§r
+#Pickaxes
+item.arcadia_pickaxeSilver.name=Silver Pickaxe
+item.arcadia_pickaxeBronze.name=Bronze Pickaxe
+item.arcadia_pickaxeRuby.name=§cRuby Pickaxe§r
+item.arcadia_pickaxeSapphire.name=§bSapphire Pickaxe§r
+#Shovels
+item.arcadia_shovelSilver.name=Silver Shovel
+item.arcadia_shovelBronze.name=Bronze Shovel
+item.arcadia_shovelRuby.name=§cRuby Shovel§r
+item.arcadia_shovelSapphire.name=§bSapphire Shovel§r
+#Axes
+item.arcadia_axeSilver.name=Silver Axe
+item.arcadia_axeBronze.name=Bronze Axe
+item.arcadia_axeRuby.name=§cRuby Axe§r
+item.arcadia_axeSapphire.name=§bSapphire Axe§r
+#Hoes
+item.arcadia_hoeSilver.name=Silver Hoe
+item.arcadia_hoeBronze.name=Bronze Hoe
+item.arcadia_hoeRuby.name=§cRuby Hoe§r
+item.arcadia_hoeSapphire.name=§bSapphire Hoe§r
+#Shears
+item.arcadia_shearsSilver.name=Silver Shears
+item.arcadia_shearsBronze.name=Bronze Shears
+item.arcadia_shearsRuby.name=§cRuby Shears§r
+item.arcadia_shearsSapphire.name=§bSapphire Shears§r
+#Helmets
+item.arcadia_helmetSilver.name=Silver Helmet
+item.arcadia_helmetBronze.name=Bronze Helmet
+item.arcadia_helmetRuby.name=§cRuby Helmet§r
+item.arcadia_helmetSapphire.name=§bSapphire Helmet§r
+#Chestplates
+item.arcadia_chestplateSilver.name=Silver Chestplate
+item.arcadia_chestplateBronze.name=Bronze Chestplate
+item.arcadia_chestplateRuby.name=§cRuby Chestplate§r
+item.arcadia_chestplateSapphire.name=§bSapphire Chestplate§r
+#Leggings
+item.arcadia_leggingsSilver.name=Silver Leggings
+item.arcadia_leggingsBronze.name=Bronze Leggings
+item.arcadia_leggingsRuby.name=§cRuby Leggings§r
+item.arcadia_leggingsSapphire.name=§bSapphire Leggings§r
+#Boots
+item.arcadia_bootsSilver.name=Silver Boots
+item.arcadia_bootsBronze.name=Bronze Boots
+item.arcadia_bootsRuby.name=§cRuby Boots§r
+item.arcadia_bootsSapphire.name=§bSapphire Boots§r
+
+#Creative Tabs
+itemGroup.tabArcadiaBlocks=§9World of Arcadia Blocks§r
+itemGroup.tabArcadiaItems=§9World of Arcadia Items§r

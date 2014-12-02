@@ -1,0 +1,16 @@
+[
+{
+  "modid": "arcadia",
+  "name": "~World of Arcadia~",
+  "description": "RPG style Minecraft Mod ...",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "www.google.com",
+  "updateUrl": "",
+  "authorList": ["Julian001"],
+  "credits": "Thx to you!",
+  "logoFile": "assets/arcadia/textures/blocks/blockRuby.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
