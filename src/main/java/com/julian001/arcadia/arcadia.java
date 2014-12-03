@@ -28,6 +28,7 @@ public class arcadia
 	//public static final PacketPipeline packetPipeline = new PacketPipeline();
 	public static CreativeTabs tabArcadiaBlocks = new CreativeTabArcadia(CreativeTabs.getNextID(), "tabArcadiaBlocks");
 	public static CreativeTabs tabArcadiaItems = new CreativeTabArcadia(CreativeTabs.getNextID(), "tabArcadiaItems");
+	public static CreativeTabs tabArcadiaPotions = new CreativeTabArcadia(CreativeTabs.getNextID(), "tabArcadiaPotions");
 	
 	@EventHandler
     public void preInit(FMLInitializationEvent event)

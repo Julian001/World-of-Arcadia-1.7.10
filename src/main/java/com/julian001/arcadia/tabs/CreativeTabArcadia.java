@@ -24,6 +24,8 @@ public class CreativeTabArcadia extends CreativeTabs {
 			return Item.getItemFromBlock(BlocksArcadia.oreBlockArcadia);}
 		if(name == "tabArcadiaItems") {
 			return ItemsArcadia.arcadiaItem;}
+		if(name == "tabArcadiaPotions") {
+			return ItemsArcadia.potionArcadia;}
 		else {
 			return Items.fire_charge;}
 	}

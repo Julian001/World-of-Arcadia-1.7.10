@@ -98,6 +98,7 @@ public class BlocksArcadia {
 		doubleSlabBronze = new BlockSlabArcadia2(true, oreBlockArcadia, 6, 5.0f, 10.0f, "slabBronze", slabBronze);
 		registerSlab("slabBronze", "doubleSlabBronze", slabBronze, doubleSlabBronze);
 		
+		//fenceSilver = new BlockFenceArcadia("fence", Material.iron, 7).setHardness(5.0F);
 		fenceSilver = new BlockFenceArcadia("fenceSilver", "blockSilver", Material.iron).setHardness(5.0F);
 		fenceCopper = new BlockFenceArcadia("fenceCopper", "blockCopper", Material.iron).setHardness(2.5F);
 		fenceTin = new BlockFenceArcadia("fenceTin", "blockTin", Material.iron).setHardness(2.5F);
