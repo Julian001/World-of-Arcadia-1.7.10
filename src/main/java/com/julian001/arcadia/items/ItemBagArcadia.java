@@ -71,14 +71,17 @@ public class ItemBagArcadia extends ItemMetadataArcadia{
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
     public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean i) {
-		NBTTagList nbtList =  itemStack.stackTagCompound.getTagList(InventoryBagArcadia.nbtKey, Constants.NBT.TAG_COMPOUND);
-		int k = nbtList.tagCount();
-		int l = 0;
+		int k = 0, l = 0;
+		if(itemStack.stackTagCompound != null) {
+			NBTTagList nbtList =  itemStack.stackTagCompound.getTagList(InventoryBagArcadia.nbtKey, Constants.NBT.TAG_COMPOUND);
+			k = nbtList.tagCount();
+		}
 		switch(itemStack.getItemDamage()) {
 			case 0: l = 9;break;
 			case 1: l = 27;break;
 			case 2: l = 54;break;
 		}
+		
 		list.add("");
 		list.add("§9Slots: " + k + "/" + l);
 	}

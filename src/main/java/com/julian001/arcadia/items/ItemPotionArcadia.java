@@ -89,7 +89,7 @@ public class ItemPotionArcadia extends ItemMetadataArcadia{
 				case 49:
 				case 50: name = "AttackAndDefense";break;
 				case 51:
-				case 52: name = "AnitVision";break;
+				case 52: name = "AntiVision";break;
 				case 53:
 				case 54:
 				case 55: name = "Defenseless";break;
@@ -174,8 +174,8 @@ public class ItemPotionArcadia extends ItemMetadataArcadia{
 			case 48: name = "normalCombinedAttackAndDefense";break;
 			case 49: name = "extendedCombinedAttackAndDefense";break;
 			case 50: name = "upgradedCombinedAttackAndDefense";break;
-			case 51: name = "normalCombinedAnitVision";break;
-			case 52: name = "extendedCombinedAnitVision";break;
+			case 51: name = "normalCombinedAntiVision";break;
+			case 52: name = "extendedCombinedAntiVision";break;
 			case 53: name = "normalCombinedDefenseless";break;
 			case 54: name = "extendedCombinedDefenseless";break;
 			case 55: name = "upgradedCombinedDefenseless";break;
