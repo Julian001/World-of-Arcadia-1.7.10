@@ -9,9 +9,12 @@ import net.minecraft.world.World;
 
 public class GuiAnvilArcadia extends GuiScreen {
 
+	@SuppressWarnings("unused")
 	private int x, y, z;
-    private EntityPlayer player;
-    private World world;
+    @SuppressWarnings("unused")
+	private EntityPlayer player;
+    @SuppressWarnings("unused")
+	private World world;
     private int xSize, ySize;
     private ResourceLocation backgroundImage = new ResourceLocation(References.ID.toLowerCase() + ":" + "textures/gui/anvil.png");
 	public GuiAnvilArcadia(EntityPlayer player, World world, int x, int y, int z) {

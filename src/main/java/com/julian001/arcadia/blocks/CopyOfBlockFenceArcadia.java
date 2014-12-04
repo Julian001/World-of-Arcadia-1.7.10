@@ -64,6 +64,7 @@ public class CopyOfBlockFenceArcadia extends BlockFence {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	private String getTextureFence() {
 		for(int i = 0; i < icons.length; i++) {
 			

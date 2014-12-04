@@ -72,19 +72,19 @@ public class Recipes {
 		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.stairBronze, 4), new Object[] {
 			"X  ", "XX ", "XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 6) });
 		//----Slabs----//
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabSilver, 6), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabArcadia, 6, 0), new Object[] {
 			"XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabCopper, 6), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabArcadia, 6, 1), new Object[] {
 			"XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabTin, 6), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabArcadia, 6, 2), new Object[] {
 			"XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabLead, 6), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabArcadia, 6, 3), new Object[] {
 			"XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabRuby, 6), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabArcadia, 6, 4), new Object[] {
 			"XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabSapphire, 6), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabArcadia, 6, 5), new Object[] {
 			"XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 5) });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabBronze, 6), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabArcadia, 6, 6), new Object[] {
 			"XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 6) });
 		//----Fences----//
 		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceSilver, 6), new Object[] {
