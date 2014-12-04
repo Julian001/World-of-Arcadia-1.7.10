@@ -9,7 +9,9 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 import com.julian001.arcadia.arcadia;
@@ -316,7 +318,7 @@ public class ItemPotionArcadia extends ItemMetadataArcadia{
 				player.addPotionEffect(new PotionEffect(Potion.weakness.id, 520 * 20, 0));break;
 			case 55: effect = new PotionEffect(Potion.blindness.id, 200 * 20, 0);
 				player.addPotionEffect(new PotionEffect(Potion.confusion.id, 200 * 20, 0));
-				player.addPotionEffect(new PotionEffect(Potion.weakness.id, 110 * 20, 0));break;
+				player.addPotionEffect(new PotionEffect(Potion.weakness.id, 110 * 20, 1));break;
 			case 56: effect = new PotionEffect(Potion.wither.id, 30 * 20, 0);
 				player.addPotionEffect(new PotionEffect(Potion.poison.id, 30 * 20, 0));break;
 			case 57: effect = new PotionEffect(Potion.wither.id, 65 * 20, 0);
@@ -341,13 +343,12 @@ public class ItemPotionArcadia extends ItemMetadataArcadia{
 			case 65: effect = new PotionEffect(Potion.jump.id, 180 * 20, 255);break;
 			case 66: effect = new PotionEffect(Potion.jump.id, 480 * 20, 255);break;
 			case 67: effect = new PotionEffect(Potion.moveSlowdown.id, 20 * 20, 7);
-				//TODOplayer.addPotionEffect(new PotionEffect(Potion.jump.id, 20 * 20, 151));
+				//TODO player.addPotionEffect(new PotionEffect(Potion.jump.id, 20 * 20, 151));
 				player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 10 * 20, 0));
 				player.addPotionEffect(new PotionEffect(Potion.confusion.id, 20 * 20, 0));
 				player.addPotionEffect(new PotionEffect(Potion.digSlowdown.id, 20 * 20, 5));break;
 		}
 		player.addPotionEffect(effect);
-		
 	    if (!player.capabilities.isCreativeMode)
         {
 	    	itemStack.stackSize--;
@@ -355,10 +356,8 @@ public class ItemPotionArcadia extends ItemMetadataArcadia{
             {
                 return new ItemStack(Items.glass_bottle);
             }
-
             player.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
         }
-	
 	    return itemStack;
 	}
 	
@@ -376,8 +375,262 @@ public class ItemPotionArcadia extends ItemMetadataArcadia{
     }
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-            par3List.add("\u00a77" + "Blindness (0:30)");                
-        
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+		switch(itemStack.getItemDamage()) {
+			case  0: list.add("Haste (3:00)");break;
+			case  1: list.add("Haste (8:00)");break;
+			case  2: list.add("Haste II (1:30)");break;
+			case  3: list.add("Mining Fatigue (3:00)");break;
+			case  4: list.add("Mining Fatigue (8:00)");break;
+			case  5: list.add("Mining Fatigue II (1:30)");break;
+			case  6: list.add("Jump Boost (3:00)");break;
+			case  7: list.add("Jump Boost (8:00)");break;
+			case  8: list.add("Jump Boost II (1:30)");break;
+			case  9: list.add("Nausea (3:00)");break;
+			case 10: list.add("Nausea (8:00)");break;
+			case 11: list.add("Resistance (3:00)");break;
+			case 12: list.add("Resistance (8:00)");break;
+			case 13: list.add("Resistance II (1:30)");break;
+			case 14: list.add("Blindness (3:00)");break;
+			case 15: list.add("Blindness (8:00)");break;
+			case 16: list.add("Wither (0:45)");break;
+			case 17: list.add("Wither (2:00)");break;
+			case 18: list.add("Wither II (0:22)");break;
+			case 19: list.add("Health Boost III (3:00)");break;
+			case 20: list.add("Health Boost III (8:00)");break;
+			case 21: list.add("Health Boost V (1:30)");break;
+			case 22: list.add("Absorption III (3:00)");break;
+			case 23: list.add("Absorption III (8:00)");break;
+			case 24: list.add("Absorption V (1:30)");break;
+			
+			case 25: list.add("Regeneration (0:50)");
+				list.add("Instant Health III");break;
+			case 26: list.add("Regeneration (2:10)");
+				list.add("Instant Health III");break;
+			case 27: list.add("Regeneration II (0:30)");
+				list.add("Instant Health IV");break;
+			case 28: list.add("Regeneration (1:00)");
+				list.add("Health Boost III (3:10)");
+				list.add("Instant Health V");break;
+			case 29: list.add("Regeneration (2:30)");
+				list.add("Health Boost III (8:20)");
+				list.add("Instant Health V");break;
+			case 30: list.add("Regeneration II (0:40)");
+				list.add("Health Boost V (1:40)");
+				list.add("Instant Health VII");break;
+			case 31: list.add("Speed (3:10)");
+				list.add("Haste (3:10)");break;
+			case 32: list.add("Speed (8:20)");
+				list.add("Haste (8:20)");break;
+			case 33: list.add("Speed II (1:40)");
+				list.add("Haste II (1:40)");break;
+			case 34: list.add("Speed (3:20)");
+				list.add("Haste (3:20)");
+				list.add("Jump Boost (3:20)");break;
+			case 35: list.add("Speed (8:40)");
+				list.add("Haste (8:40)");
+				list.add("Jump Boost (8:40)");break;
+			case 36: list.add("Speed II (1:50)");
+				list.add("Haste II (1:50)");
+				list.add("Jump Boost II (1:50)");break;
+			case 37: list.add("Speed (3:30)");
+				list.add("Haste (3:30)");
+				list.add("Jump Boost (3:30)");
+				list.add("Invisibility (3:30)");break;
+			case 38: list.add("Speed (9:00)");
+				list.add("Haste (9:00)");
+				list.add("Jump Boost (9:00)");
+				list.add("Invisibility (9:00)");break;
+			case 39: list.add("Speed II (2:00)");
+				list.add("Haste II (2:00)");
+				list.add("Jump Boost II (2:00)");
+				list.add("Invisibility (2:00)");break;
+			case 40: list.add("Night Vision (3:10)");
+				list.add("Water Breathing (3:10)");break;
+			case 41: list.add("Night Vision (8:20)");
+				list.add("Water Breathing (8:20)");break;
+			case 42: list.add("Absorption III (3:10)");
+				list.add("Fire Resistance (3:10)");break;
+			case 43: list.add("Absorption III (8:20)");
+				list.add("Fire Resistance (8:20)");break;
+			case 44: list.add("Absorption V (1:40)");
+				list.add("Fire Resistance (1:40)");break;
+			case 45: list.add("Absorption III (3:20)");
+				list.add("Fire Resistance (3:20)");
+				list.add("Resistance (3:20)");break;
+			case 46: list.add("Absorption III (8:40)");
+				list.add("Fire Resistance (8:40)");
+				list.add("Resistance (8:40)");break;
+			case 47: list.add("Absorption III (1:50)");
+				list.add("Fire Resistance (1:50)");
+				list.add("Resistance II (1:50)");break;
+			case 48: list.add("Absorption III (3:30)");
+				list.add("Fire Resistance (3:30)");
+				list.add("Resistance (3:30)");
+				list.add("Strength (3:30)");break;
+			case 49: list.add("Absorption III (9:00)");
+				list.add("Fire Resistance (9:00)");
+				list.add("Resistance (9:00)");
+				list.add("Strength (9:00)");break;
+			case 50: list.add("Absorption III (2:00)");
+				list.add("Fire Resistance (2:00)");
+				list.add("Resistance II (2:00)");
+				list.add("Strength II (2:00)");break;
+			case 51: list.add("Blindness (3:10)");
+				list.add("Nausea (3:10)");break;
+			case 52: list.add("Blindness (8:20)");
+				list.add("Nausea (8:20)");break;
+			case 53: list.add("Blindness (3:20)");
+				list.add("Nausea (3:20)");
+				list.add("Weakness (3:20)");break;
+			case 54: list.add("Blindness (8:40)");
+				list.add("Nausea (8:40)");
+				list.add("Weakness (8:40)");break;
+			case 55: list.add("Blindness (1:50)");
+				list.add("Nausea (1:50)");
+				list.add("Weakness II (1:50)");break;
+			case 56: list.add("Wither (0:30)");
+				list.add("Poison (0:30)");break;
+			case 57: list.add("Wither (1:05)");
+				list.add("Poison (1:05)");break;
+			case 58: list.add("Wither II (0:15)");
+				list.add("Poison II (0:15)");break;
+			case 59: list.add("Wither (0:35)");
+				list.add("Poison (0:35)");
+				list.add("Hunger (0:35)");break;
+			case 60: list.add("Wither (1:10)");
+				list.add("Poison (1:10)");
+				list.add("Hunger (1:10)");break;
+			case 61: list.add("Wither II (0:20)");
+				list.add("Poison II (0:20)");
+				list.add("Hunger II (0:20)");break;
+			case 62: list.add("Slowness (3:10)");
+				list.add("Mining Fatigue (3:10)");break;
+			case 63: list.add("Slowness (8:20)");
+				list.add("Mining Fatigue (8:20)");break;
+			case 64: list.add("Slowness II (1:40)");
+				list.add("Mining Fatigue II (1:40)");break;
+			case 65: list.add("Feather Falling (3:00)");break;
+			case 66: list.add("Feather Falling (8:00)");break;
+			case 67: list.add("Stunned (0:20)");break;
+		}
+		list.add("");
+        list.add(EnumChatFormatting.DARK_PURPLE + StatCollector.translateToLocal("potion.effects.whenDrank"));
+        switch(itemStack.getItemDamage()) {
+        	case  0:
+        	case  1: list.add(EnumChatFormatting.BLUE + "+20% Digging Speed");break;
+        	case  2: list.add(EnumChatFormatting.BLUE + "+40% Digging Speed");break;
+        	case  3:
+        	case  4: list.add(EnumChatFormatting.RED + "-20% Digging Speed");break;
+        	case  5: list.add(EnumChatFormatting.RED + "-40% Digging Speed");break;
+        	case  6:
+        	case  7: list.add(EnumChatFormatting.BLUE + "+1/2 Block Jump Hight");break;
+        	case  8: list.add(EnumChatFormatting.BLUE + "+1 Block Jump Hight");break;
+        	case  9:
+        	case 10: list.add(EnumChatFormatting.RED + "You feel sick!");break;
+        	case 11:
+        	case 12: list.add(EnumChatFormatting.BLUE + "+20% Damage Reduction");break;
+        	case 13: list.add(EnumChatFormatting.BLUE + "+40% Damage Reduction");break;
+        	case 14:
+        	case 15: list.add(EnumChatFormatting.RED + "You can't see anymore!");break;
+        	case 16:
+        	case 17: list.add(EnumChatFormatting.RED + "-0.25 Hearts per Second");break;
+        	case 18: list.add(EnumChatFormatting.RED + "-0.5 Hearts per Second");break;
+        	case 19:
+        	case 20: list.add(EnumChatFormatting.BLUE + "+6 Hearts Base Health");break;
+        	case 21: list.add(EnumChatFormatting.BLUE + "+10 Hearts Base Health");break;
+        	case 22:
+        	case 23: list.add(EnumChatFormatting.BLUE + "+6 Hearts Absorption Health");break;
+        	case 24: list.add(EnumChatFormatting.BLUE + "+10 Hearts Absorption Health");break;
+    		
+        	case 25:
+        	case 26: list.add(EnumChatFormatting.BLUE + "+0.5 Hearts per 2.5 Seconds");
+    			list.add(EnumChatFormatting.BLUE + "+4 Hearts");break;
+        	case 27: list.add(EnumChatFormatting.BLUE + "+0.25 Hearts per 2.5 Seconds");
+				list.add(EnumChatFormatting.BLUE + "+6 Hearts");break;
+        	case 28:
+        	case 29: list.add(EnumChatFormatting.BLUE + "+0.5 Hearts per 2.5 Seconds");
+				list.add(EnumChatFormatting.BLUE + "+6 Hearts Base Health");
+				list.add(EnumChatFormatting.BLUE + "+6 Hearts");break;
+        	case 30: list.add(EnumChatFormatting.BLUE + "+0.25 Hearts per 2.5 Seconds");
+				list.add(EnumChatFormatting.BLUE + "+10 Hearts Base Health");
+				list.add(EnumChatFormatting.BLUE + "+10 Hearts");break;
+        	case 31:
+        	case 32: list.add(EnumChatFormatting.BLUE + "+20% Speed");
+				list.add(EnumChatFormatting.BLUE + "+20% Digging Speed");break;
+        	case 33: list.add(EnumChatFormatting.BLUE + "+40% Speed");
+				list.add(EnumChatFormatting.BLUE + "+40% Digging Speed");break;
+        	case 34:
+        	case 35: list.add(EnumChatFormatting.BLUE + "+20% Speed");
+				list.add(EnumChatFormatting.BLUE + "+20% Digging Speed");
+				list.add(EnumChatFormatting.BLUE + "+1/2 Block Jump Hight");break;
+        	case 36: list.add(EnumChatFormatting.BLUE + "+40% Speed");
+				list.add(EnumChatFormatting.BLUE + "+40% Digging Speed");
+				list.add(EnumChatFormatting.BLUE + "+1 Block Jump Hight");break;
+        	case 37:
+        	case 38: list.add(EnumChatFormatting.BLUE + "+20% Speed");
+				list.add(EnumChatFormatting.BLUE + "+20% Digging Speed");
+				list.add(EnumChatFormatting.BLUE + "+1/2 Block Jump Hight");
+				list.add(EnumChatFormatting.BLUE + "You will be invisible!");break;
+        	case 39: list.add(EnumChatFormatting.BLUE + "+40% Speed");
+				list.add(EnumChatFormatting.BLUE + "+40% Digging Speed");
+				list.add(EnumChatFormatting.BLUE + "+1 Block Jump Hight");
+				list.add(EnumChatFormatting.BLUE + "You will be invisible!");break;
+        	case 40: list.add(EnumChatFormatting.BLUE + "You can see more!");
+    			list.add(EnumChatFormatting.BLUE + "+100% Air Regeneration");break;
+        	case 41: list.add(EnumChatFormatting.BLUE + "You can see more!");
+				list.add(EnumChatFormatting.BLUE + "+100% Air Regeneration");break;
+        	case 42:
+        	case 43: list.add(EnumChatFormatting.BLUE + "+6 Hearts Absorption Health");
+    			list.add(EnumChatFormatting.BLUE + "You are able to resist high heat!");break;
+        	case 44: list.add(EnumChatFormatting.BLUE + "+10 Hearts Absorption Health");
+				list.add(EnumChatFormatting.BLUE + "You are able to resist high heat!");break;
+        	case 45:
+        	case 46: list.add(EnumChatFormatting.BLUE + "+6 Hearts Absorption Health");
+    			list.add(EnumChatFormatting.BLUE + "You are able to resist high heat!");
+    			list.add(EnumChatFormatting.BLUE + "+20% Damage Reduction");break;
+        	case 47: list.add(EnumChatFormatting.BLUE + "+10 Hearts Absorption Health");
+				list.add(EnumChatFormatting.BLUE + "You are able to resist high heat!");
+				list.add(EnumChatFormatting.BLUE + "+40% Damage Reduction");break;
+        	case 48:
+        	case 49: list.add(EnumChatFormatting.BLUE + "+6 Hearts Absorption Health");
+    			list.add(EnumChatFormatting.BLUE + "You are able to resist high heat!");
+    			list.add(EnumChatFormatting.BLUE + "+20% Damage Reduction");
+    			list.add(EnumChatFormatting.BLUE + "+130% Attack Damage");break;
+        	case 50: list.add(EnumChatFormatting.BLUE + "+10 Hearts Absorption Health");
+				list.add(EnumChatFormatting.BLUE + "You are able to resist high heat!");
+				list.add(EnumChatFormatting.BLUE + "+40% Damage Reduction");
+    			list.add(EnumChatFormatting.BLUE + "+260% Attack Damage");break;
+        	case 51:
+        	case 52: list.add(EnumChatFormatting.RED + "You can't see anymore!");
+        		list.add(EnumChatFormatting.RED + "You feel sick!");break;
+        	case 53:
+        	case 54: list.add(EnumChatFormatting.RED + "You can't see anymore!");
+        		list.add(EnumChatFormatting.RED + "You feel sick!");
+        		list.add(EnumChatFormatting.RED + "-50% Attack Damage");break;
+        	case 55: list.add(EnumChatFormatting.RED + "You can't see anymore!");
+	    		list.add(EnumChatFormatting.RED + "You feel sick!");
+	    		list.add(EnumChatFormatting.RED + "-100% Attack Damage");break;
+        	case 56:
+        	case 57: list.add(EnumChatFormatting.RED + "-0.25 Hearts per Second");
+        		list.add(EnumChatFormatting.RED + "-0.5 Hearts per 1.25 Seconds");break;
+        	case 58: list.add(EnumChatFormatting.RED + "-0.5 Hearts per Second");
+        		list.add(EnumChatFormatting.RED + "-1 Heart per 1.25 Seconds");break;
+        	case 59:
+        	case 60: list.add(EnumChatFormatting.RED + "-0.25 Hearts per Second");
+        		list.add(EnumChatFormatting.RED + "-0.5 Hearts per 1.25 Seconds");
+        		list.add(EnumChatFormatting.RED + "-0.5 Food Meters per Second");break;
+        	case 61: list.add(EnumChatFormatting.RED + "-0.5 Hearts per Second");
+        		list.add(EnumChatFormatting.RED + "-1 Heart per 1.25 Seconds");
+        		list.add(EnumChatFormatting.RED + "-1 Food Meter per Second");break;
+        	case 62:
+        	case 63: list.add(EnumChatFormatting.RED + "-15% Speed");
+        		list.add(EnumChatFormatting.RED + "-20% Digging Speed");break;
+        	case 64: list.add(EnumChatFormatting.RED + "-30% Speed");
+        		list.add(EnumChatFormatting.RED + "-40% Digging Speed");break;
+        	case 65:
+        	case 66: list.add(EnumChatFormatting.BLUE + "No Fall Damage!");break;
+        	case 67: list.add(EnumChatFormatting.BLUE + "Unable to Move and Mine!");break;
+        }
     }
 }

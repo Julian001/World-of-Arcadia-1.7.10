@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-import com.julian001.arcadia.items.ItemBlockOreStorageArcadia;
+import com.julian001.arcadia.items.itemblock.ItemBlockOreStorageArcadia;
 import com.julian001.arcadia.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;

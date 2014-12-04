@@ -9,8 +9,8 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-import com.julian001.arcadia.items.ItemBlockOreArcadia;
 import com.julian001.arcadia.items.ItemsArcadia;
+import com.julian001.arcadia.items.itemblock.ItemBlockOreArcadia;
 import com.julian001.arcadia.lib.References;
 
 import cpw.mods.fml.common.registry.GameRegistry;

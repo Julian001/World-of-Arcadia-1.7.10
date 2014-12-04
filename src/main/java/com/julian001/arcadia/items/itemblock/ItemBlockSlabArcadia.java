@@ -1,4 +1,4 @@
-package com.julian001.arcadia.items;
+package com.julian001.arcadia.items.itemblock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
