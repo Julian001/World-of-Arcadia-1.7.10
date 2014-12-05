@@ -14,6 +14,8 @@ public class BlocksArcadia {
 	public static Block oreBlockArcadia;
 	public static Block slabArcadia;
 	public static Block doubleSlabArcadia;
+	public static Block fenceArcadia;
+	public static Block wallArcadia;
 	
 	public static Block stairSilver;
 	public static Block stairCopper;
@@ -43,7 +45,9 @@ public class BlocksArcadia {
 		arcadiaBlock = new BlockArcadia("arcadiaBlock", Material.rock).setStepSound(Block.soundTypeGlass);
 		oreArcadia = new BlockOreArcadia("oreArcadia", 6);
 		oreBlockArcadia = new BlockOreStorageArcadia("oreBlockArcadia", 7);
-		
+		fenceArcadia = new BlockFenceArcadia2("fenceArcadia", "arcadiaBlock");
+		wallArcadia = new BlockWallArcadia("wallArcadia", oreBlockArcadia);
+				
 		slabArcadia = new BlockSlabArcadia("slab", false);
 		doubleSlabArcadia = new BlockSlabArcadia("doubleSlab", true);
 		GameRegistry.registerBlock(slabArcadia, ItemBlockSlabArcadia.class, "slab", slabArcadia, doubleSlabArcadia, false);
@@ -66,7 +70,7 @@ public class BlocksArcadia {
 		fenceSapphire = new BlockFenceArcadia("fenceSapphire", "blockSapphire", Material.iron).setHardness(6.0F);
 		fenceBronze = new BlockFenceArcadia("fenceBronze", "blockBronze", Material.iron).setHardness(5.0F);
 		
-		wallSilver = new BlockWallArcadia("wallSilver", oreBlockArcadia);
+		//wallSilver = new BlockWallArcadia("wallSilver", oreBlockArcadia);
 		
 		anvilArcadia = new BlockAnvilArcadia("anvil");
 		clearGlass = new BlockGlassArcadia("clearGlass", Material.glass, false).setHardness(0.3F);
