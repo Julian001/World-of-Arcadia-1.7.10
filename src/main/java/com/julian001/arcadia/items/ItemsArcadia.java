@@ -84,6 +84,7 @@ public class ItemsArcadia {
 	public static Item bagArcadia;
 	public static Item mysticalGlove;
 	public static Item potionArcadia;
+	public static Item mysticalPowder;
 	
 	
 	public static void init() {
@@ -94,6 +95,7 @@ public class ItemsArcadia {
 		bagArcadia = new ItemBagArcadia("bagArcadia", 3);
 		mysticalGlove = new ItemMysticalGloveArcadia("mysticalGlove", 7F, toolMYSTICAL);
 		potionArcadia = new ItemPotionArcadia("potionArcadia", 68);
+		mysticalPowder = new ItemMysticalPowder("mysticalPowder");
 		
 		
 		swordSilver = new ItemSwordArcadia("swordSilver", toolSILVER);

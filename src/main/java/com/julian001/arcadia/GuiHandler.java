@@ -3,8 +3,10 @@ package com.julian001.arcadia;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
+import com.julian001.arcadia.blocks.BlocksArcadia;
 import com.julian001.arcadia.gui.GuiAnvilArcadia;
 import com.julian001.arcadia.gui.GuiBagArcadia;
+import com.julian001.arcadia.inventory.ContainerAnvilArcadia;
 import com.julian001.arcadia.inventory.ContainerBagArcadia;
 import com.julian001.arcadia.inventory.InventoryBagArcadia;
 import com.julian001.arcadia.lib.GUIs;
@@ -15,21 +17,32 @@ public class GuiHandler implements IGuiHandler {
 
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		if(ID == GUIs.BAG.ordinal()) {
-			InventoryBagArcadia inv = getInventory(x, player);
-			if(inv == null) {
-				return null;
+		GUIs gui = GUIs.values()[ID];
+		switch(gui) {
+			case ANVILARCADIA: return ID == GUIs.ANVILARCADIA.ordinal() && world.getBlock(x, y, z) == BlocksArcadia.anvilArcadia ? new ContainerAnvilArcadia(player.inventory, world, x, y, z) : null;
+			case BAG: { InventoryBagArcadia inv = getInventory(x, player);
+				if(inv == null) {
+					return null;
+				}
+				return new ContainerBagArcadia(player.inventory, inv);
 			}
-			return new ContainerBagArcadia(player.inventory, inv);
+			default: return null;
 		}
-		else return null;
+//		if(ID == GUIs.BAG.ordinal()) {
+//			InventoryBagArcadia inv = getInventory(x, player);
+//			if(inv == null) {
+//				return null;
+//			}
+//			return new ContainerBagArcadia(player.inventory, inv);
+//		}
+//		else return null;
 	}
 
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		GUIs gui = GUIs.values()[ID];
 		switch(gui) {
-		    case ANVILARCADIA: return new GuiAnvilArcadia(player, world, x, y, z);
+		    case ANVILARCADIA: return world.getBlock(x, y, z) == BlocksArcadia.anvilArcadia ? new GuiAnvilArcadia(player.inventory, world, x, y, z) : null;
 		    case BAG: {
 					InventoryBagArcadia inv = getInventory(x, player);
 					if(inv == null) {

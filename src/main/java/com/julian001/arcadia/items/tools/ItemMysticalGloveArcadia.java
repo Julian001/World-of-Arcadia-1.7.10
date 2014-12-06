@@ -40,7 +40,7 @@ public class ItemMysticalGloveArcadia extends ItemOmniToolArcadia {
 			Blocks.quartz_block, Blocks.quartz_stairs, Blocks.carpet, Blocks.coal_block, 
 			Blocks.acacia_stairs, Blocks.dark_oak_stairs, Blocks.sticky_piston, 
 			Blocks.lit_pumpkin, Blocks.lit_redstone_lamp, Blocks.lit_furnace,
-			BlocksArcadia.oreBlockArcadia, BlocksArcadia.oreArcadia});
+			BlocksArcadia.oreBlockArcadia, BlocksArcadia.oreArcadia, BlocksArcadia.multiOre});
 	public ItemMysticalGloveArcadia(String name, float dammage, ToolMaterial material) {
 		super(dammage, material, blocksEffectiveAgainst);
 		setUnlocalizedName(References.ID + "_" + name);

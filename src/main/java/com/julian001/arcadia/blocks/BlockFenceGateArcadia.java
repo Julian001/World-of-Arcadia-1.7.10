@@ -2,26 +2,23 @@ package com.julian001.arcadia.blocks;
 
 import java.util.List;
 
+import com.julian001.arcadia.arcadia;
+import com.julian001.arcadia.items.itemblock.ItemBlockFenceArcadia;
+import com.julian001.arcadia.lib.References;
+
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockFenceGate;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-import com.julian001.arcadia.arcadia;
-import com.julian001.arcadia.items.itemblock.ItemBlockFenceArcadia;
-import com.julian001.arcadia.lib.References;
-
-import cpw.mods.fml.common.registry.GameRegistry;
-
-public class BlockFenceArcadia2 extends BlockFence {
+public class BlockFenceGateArcadia extends BlockFenceGate {
 
 	private static final String[] unlocalizedNames = {"Silver",	"Copper", "Tin", "Lead", "Ruby", "Sapphire", "Bronze"};
-	public BlockFenceArcadia2(String name, String texture) {
-		super(texture, Material.iron);
+	public BlockFenceGateArcadia(String name) {
 		setBlockName(References.ID + "_" + name);
 		setCreativeTab(arcadia.tabArcadiaBlocks);
 		setStepSound(Block.soundTypeMetal);
@@ -59,37 +56,4 @@ public class BlockFenceArcadia2 extends BlockFence {
 		    default: return 4.0F;
 		 }
     }
-	
-	@Override
-    public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
-        return true;
-    }
-	
-	@Override
-	public int damageDropped(int meta) {
-		return meta;
-	}
-	
-//	 @SideOnly(Side.CLIENT)
-//    public void registerBlockIcons(IIconRegister p_149651_1_)    {
-//        this.blockIcon = p_149651_1_.registerIcon(this.field_149827_a);
-//    }
-//	@SideOnly(Side.CLIENT)
-//	@Override
-//	public void registerBlockIcons(IIconRegister iconRegister) {
-//		for(int i = 0; i < unlocalizedNames.length; i++) {
-//			String name = "";
-//			switch(i) {
-//				case 0: {name = "Silver";break;}
-//				case 1: {name = "Copper";break;}
-//				case 2: {name = "Tin";break;}
-//				case 3: {name = "Lead";break;}
-//				case 4: {name = "Ruby";break;}
-//				case 5: {name = "Sapphire";break;}
-//				case 6: {name = "Bronze";break;}
-//				default: name = "Broken";			
-//			}
-//			this.blockIcon = iconRegister.registerIcon(References.ID + ":block" + name);
-//		}
-//	}
 }

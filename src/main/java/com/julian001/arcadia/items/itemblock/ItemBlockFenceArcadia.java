@@ -1,7 +1,10 @@
 package com.julian001.arcadia.items.itemblock;
 
+import com.julian001.arcadia.blocks.BlocksArcadia;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 
 public class ItemBlockFenceArcadia extends ItemBlockArcadia {
 	public ItemBlockFenceArcadia(Block block) {
@@ -22,5 +25,10 @@ public class ItemBlockFenceArcadia extends ItemBlockArcadia {
 			default: name = "noMeta";
 		}
 		return getUnlocalizedName() + "." + name;
+	}
+	
+	@Override
+	public IIcon getIconFromDamage(int meta) {
+		return BlocksArcadia.oreBlockArcadia.getIcon(0, meta);
 	}
 }

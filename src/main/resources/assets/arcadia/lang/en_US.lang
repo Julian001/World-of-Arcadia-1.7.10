@@ -45,6 +45,7 @@ tile.arcadia_clearGlass.name=Clear Glass
 item.arcadia_arcadiaItem.name=Arcadia Test Item
 item.arcadia_friedEgg.name=Fried Egg
 item.arcadia_mysticalGlove.name=§3§lMystical Glove§r
+item.arcadia_mysticalPowder.name=§5§lMystical Powder§r
 #Bags
 item.arcadia_bagArcadia.bagSmall.name=Small Bag
 item.arcadia_bagArcadia.bagMedium.name=Medium Bag

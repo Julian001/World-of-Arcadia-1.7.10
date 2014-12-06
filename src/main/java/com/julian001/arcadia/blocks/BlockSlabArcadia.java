@@ -1,7 +1,9 @@
 package com.julian001.arcadia.blocks;
 
 import java.util.List;
+import java.util.Random;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -18,8 +20,10 @@ public class BlockSlabArcadia extends BlockSlab {
 	private static final String[] unlocalizedNames = {"Silver",	"Copper", "Tin", "Lead", "Ruby", "Sapphire", "Bronze"};
 	public BlockSlabArcadia(String name, boolean isDouble) {
 		super(isDouble, Material.iron);
-		setBlockName(References.ID + "_" + name);
 		setCreativeTab(arcadia.tabArcadiaBlocks);
+		setStepSound(Block.soundTypeMetal);
+		setResistance(10F);
+		setBlockName(References.ID + "_" + name);
 	}
 
 	@Override
@@ -29,8 +33,8 @@ public class BlockSlabArcadia extends BlockSlab {
 	
 	@Override
 	public IIcon getIcon(int side, int meta) {
-		int typemeta = meta & 7;
-		return BlocksArcadia.oreBlockArcadia.getIcon(side, typemeta);
+		//int typemeta = meta & 7;
+		return BlocksArcadia.oreBlockArcadia.getIcon(side, meta & 7);
 	}
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -52,4 +56,26 @@ public class BlockSlabArcadia extends BlockSlab {
 			return Item.getItemFromBlock(BlocksArcadia.slabArcadia);
 		}
 	}
+	
+	public int quantityDropped(Random random) {
+        return this.field_150004_a ? 2 : 1;
+    }
+	//TODO Drop
+    public int damageDropped(int meta) {
+        return meta & 7;
+    }
+    
+	public float getBlockHardness(World world, int x, int y, int z) {
+		int meta = world.getBlockMetadata(x, y, z);
+		switch (meta) {
+			case 0: return 5.0F;
+			case 1: return 2.5F;
+			case 2: return 2.5F;
+			case 3: return 2.0F;
+			case 4: return 6.0F;
+			case 5: return 6.0F;
+			case 6: return 5.0F;
+		    default: return 4.0F;
+		 }
+    }
 }

@@ -16,6 +16,7 @@ public class BlocksArcadia {
 	public static Block doubleSlabArcadia;
 	public static Block fenceArcadia;
 	public static Block wallArcadia;
+	public static Block fenceGateArcadia;
 	
 	public static Block stairSilver;
 	public static Block stairCopper;
@@ -38,6 +39,7 @@ public class BlocksArcadia {
 	public static Block anvilArcadia;
 	public static Block clearGlass;
 	public static Block clearGlassPane;
+	public static Block multiOre;
 	
 	
 	public static void init() {
@@ -45,8 +47,9 @@ public class BlocksArcadia {
 		arcadiaBlock = new BlockArcadia("arcadiaBlock", Material.rock).setStepSound(Block.soundTypeGlass);
 		oreArcadia = new BlockOreArcadia("oreArcadia", 6);
 		oreBlockArcadia = new BlockOreStorageArcadia("oreBlockArcadia", 7);
-		fenceArcadia = new BlockFenceArcadia2("fenceArcadia", "arcadiaBlock");
+		fenceArcadia = new BlockFenceArcadia2("fenceArcadia", "oreBlockArcadia");
 		wallArcadia = new BlockWallArcadia("wallArcadia", oreBlockArcadia);
+		fenceGateArcadia = new BlockFenceGateArcadia("fenceGateArcadia");
 				
 		slabArcadia = new BlockSlabArcadia("slab", false);
 		doubleSlabArcadia = new BlockSlabArcadia("doubleSlab", true);
@@ -77,6 +80,7 @@ public class BlocksArcadia {
 		//TODO clearGlassPane = new BlockGlassPaneArcadia("clearGlassPane", "clearGlass", false).setHardness(0.3F);
 		//(new Block Pane("iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("fenceIron"));
 		//(new BlockPane("glass", "glass_pane_top", Material.glass, false)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("thinGlass"));
+		multiOre = new BlockMultiOreArcadia("multiOre");
 		
 	}
 }
