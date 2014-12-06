@@ -31,26 +31,24 @@ public class ContainerAnvilArcadia extends Container {
 		posY = j;
 		posZ = k;
 		this.addSlotToContainer(new SlotCrafting(inventoryplayer.player,
-				craftMatrix, craftResult, 0, 136, 36));
+				craftMatrix, craftResult, 0, 143, 54));
 		for (int l = 0; l < 5; l++) {
 			for (int k1 = 0; k1 < 5; k1++) {
 				this.addSlotToContainer(new Slot(craftMatrix, k1 + l * 5,
-						8 + k1 * 18, -1 + l * 18));
+						15 + k1 * 18, 17 + l * 18));
 			}
-
 		}
 
 		for (int i1 = 0; i1 < 3; i1++) {
 			for (int l1 = 0; l1 < 9; l1++) {
 				this.addSlotToContainer(new Slot(inventoryplayer, l1 + i1 * 9
-						+ 9, 8 + l1 * 18, 102 + i1 * 18));
+						+ 9, 15 + l1 * 18, 120+ i1 * 18));
 			}
-
 		}
 
 		for (int j1 = 0; j1 < 9; j1++) {
-			this.addSlotToContainer(new Slot(inventoryplayer, j1, 8 + j1 * 18,
-					160));
+			this.addSlotToContainer(new Slot(inventoryplayer, j1, 15 + j1 * 18,
+					178));
 		}
 
 		onCraftMatrixChanged(craftMatrix);
