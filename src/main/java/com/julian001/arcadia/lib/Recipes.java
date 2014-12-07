@@ -103,6 +103,13 @@ public class Recipes {
 			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 6), 'Y', Items.stick });
 		//----Food----//
 		GameRegistry.addSmelting(Items.egg, new ItemStack(ItemsArcadia.friedEgg), 0.3F);
+		GameRegistry.addRecipe(new ItemStack(ItemsArcadia.sushi, 2), new Object[] {
+			" X ", "XYX", " X ", 'X', Items.reeds, 'Y', Items.fish });
+		GameRegistry.addRecipe(new ItemStack(ItemsArcadia.sushiSoup), new Object[] {
+			"X", "X", "Y", 'X', ItemsArcadia.sushi, 'Y', Items.bowl });
+		GameRegistry.addShapelessRecipe(new ItemStack(ItemsArcadia.cheese), Items.milk_bucket, Items.sugar);
+		GameRegistry.addRecipe(new ItemStack(ItemsArcadia.sandwich), new Object[] {
+			" X ", "Y#Y", " X ", 'X', ItemsArcadia.cheese, 'Y', Items.bread, '#', Items.porkchop });
 		//----Swords----//
 		GameRegistry.addRecipe(new ItemStack(ItemsArcadia.swordSilver), new Object[] {
 			"X", "X", "Y", 'X', new ItemStack(ItemsArcadia.ingotArcadia, 1, 0), 'Y', Items.stick });

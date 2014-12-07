@@ -33,6 +33,7 @@ public class ItemIngotArcadia extends ItemMetadataArcadia {
 				case 5: {name = "gemSapphire";break;}
 				case 6: {name = "ingotBronze";break;}
 				case 7: {name = "blankBronze";break;}
+				case 8: {name = "ingotShadowSteel";break;}
 				default: name = "Broken";			
 			}
 			icons[i] = iconRegister.registerIcon(References.ID + ":" + name);
@@ -56,6 +57,7 @@ public class ItemIngotArcadia extends ItemMetadataArcadia {
 			case 5: {name = "gemSapphire";break;}
 			case 6: {name = "ingotBronze";break;}
 			case 7: {name = "blankBronze";break;}
+			case 8: {name = "ingotShadowSteel";break;}
 			default: name = "Broken";
 		}
 		return getUnlocalizedName() + "." + name;

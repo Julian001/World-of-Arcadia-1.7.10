@@ -16,7 +16,7 @@ import com.julian001.arcadia.items.ItemsArcadia;
 
 public class CraftingManagerAnvilArcadia
 {
-	//public static final int WILDCARD_VALUE = Short.MAX_VALUE;
+	//public static final int WILDCARD_VALUE = Short.MAX_VALUE;CraftingManager, ContainerCrafting
 	private static final CraftingManagerAnvilArcadia instance = new CraftingManagerAnvilArcadia();
 	@SuppressWarnings("rawtypes")
 	private List recipes = new ArrayList();

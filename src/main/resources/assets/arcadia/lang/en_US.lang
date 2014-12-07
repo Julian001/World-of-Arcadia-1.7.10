@@ -43,9 +43,14 @@ tile.arcadia_anvil.name=Anvil
 tile.arcadia_clearGlass.name=Clear Glass
 
 item.arcadia_arcadiaItem.name=Arcadia Test Item
-item.arcadia_friedEgg.name=Fried Egg
 item.arcadia_mysticalGlove.name=§3§lMystical Glove§r
 item.arcadia_mysticalPowder.name=§5§lMystical Powder§r
+#Food
+item.arcadia_friedEgg.name=Fried Egg
+item.arcadia_sushi.name=Sushi
+item.arcadia_sushiSoup.name=Sushi Soup
+item.arcadia_cheese.name=Cheese
+item.arcadia_sandwich.name=Sandwich
 #Bags
 item.arcadia_bagArcadia.bagSmall.name=Small Bag
 item.arcadia_bagArcadia.bagMedium.name=Medium Bag
@@ -59,56 +64,67 @@ item.arcadia_ingotArcadia.gemRuby.name=§cRuby§r
 item.arcadia_ingotArcadia.gemSapphire.name=§bSapphire§r
 item.arcadia_ingotArcadia.ingotBronze.name=Bronze Ingot
 item.arcadia_ingotArcadia.blankBronze.name=Blank Bronze
+item.arcadia_ingotArcadia.ingotShadowSteel.name=§8Shadow Steel Ingot§r
 #Swords
 item.arcadia_swordSilver.name=Silver Sword
 item.arcadia_swordBronze.name=Bronze Sword
 item.arcadia_swordRuby.name=§cRuby Sword§r
 item.arcadia_swordSapphire.name=§bSapphire Sword§r
+item.arcadia_swordShadowSteel.name=§8Shadow Steel Sword§r
 #Pickaxes
 item.arcadia_pickaxeSilver.name=Silver Pickaxe
 item.arcadia_pickaxeBronze.name=Bronze Pickaxe
 item.arcadia_pickaxeRuby.name=§cRuby Pickaxe§r
 item.arcadia_pickaxeSapphire.name=§bSapphire Pickaxe§r
+item.arcadia_pickaxeShadowSteel.name=§8Shadow Steel Pickaxe§r
 #Shovels
 item.arcadia_shovelSilver.name=Silver Shovel
 item.arcadia_shovelBronze.name=Bronze Shovel
 item.arcadia_shovelRuby.name=§cRuby Shovel§r
 item.arcadia_shovelSapphire.name=§bSapphire Shovel§r
+item.arcadia_shovelShadowSteel.name=§8Shadow Steel Shovel§r
 #Axes
 item.arcadia_axeSilver.name=Silver Axe
 item.arcadia_axeBronze.name=Bronze Axe
 item.arcadia_axeRuby.name=§cRuby Axe§r
 item.arcadia_axeSapphire.name=§bSapphire Axe§r
+item.arcadia_axeShadowSteel.name=§8Shadow Steel Axe§r
 #Hoes
 item.arcadia_hoeSilver.name=Silver Hoe
 item.arcadia_hoeBronze.name=Bronze Hoe
 item.arcadia_hoeRuby.name=§cRuby Hoe§r
 item.arcadia_hoeSapphire.name=§bSapphire Hoe§r
+item.arcadia_hoeShadowSteel.name=§8Shadow Steel Hoe§r
 #Shears
 item.arcadia_shearsSilver.name=Silver Shears
 item.arcadia_shearsBronze.name=Bronze Shears
 item.arcadia_shearsRuby.name=§cRuby Shears§r
 item.arcadia_shearsSapphire.name=§bSapphire Shears§r
+item.arcadia_shearsShadowSteel.name=§8Shadow Steel Shears§r
 #Helmets
 item.arcadia_helmetSilver.name=Silver Helmet
 item.arcadia_helmetBronze.name=Bronze Helmet
 item.arcadia_helmetRuby.name=§cRuby Helmet§r
 item.arcadia_helmetSapphire.name=§bSapphire Helmet§r
+item.arcadia_helmetShadowSteel.name=§8Shadow Steel Helmet§r
 #Chestplates
 item.arcadia_chestplateSilver.name=Silver Chestplate
 item.arcadia_chestplateBronze.name=Bronze Chestplate
 item.arcadia_chestplateRuby.name=§cRuby Chestplate§r
 item.arcadia_chestplateSapphire.name=§bSapphire Chestplate§r
+item.arcadia_chestplateShadowSteel.name=§8Shadow Steel Chestplate§r
 #Leggings
 item.arcadia_leggingsSilver.name=Silver Leggings
 item.arcadia_leggingsBronze.name=Bronze Leggings
 item.arcadia_leggingsRuby.name=§cRuby Leggings§r
 item.arcadia_leggingsSapphire.name=§bSapphire Leggings§r
+item.arcadia_leggingsShadowSteel.name=§8Shadow Steel Leggings§r
 #Boots
 item.arcadia_bootsSilver.name=Silver Boots
 item.arcadia_bootsBronze.name=Bronze Boots
 item.arcadia_bootsRuby.name=§cRuby Boots§r
 item.arcadia_bootsSapphire.name=§bSapphire Boots§r
+item.arcadia_bootsShadowSteel.name=§8Shadow Steel Boots§r
 
 #Potions
 item.arcadia_potionArcadia.normalHaste.name=Potion of Haste

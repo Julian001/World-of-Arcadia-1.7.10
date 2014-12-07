@@ -26,6 +26,7 @@ public class ItemBagArcadia extends ItemMetadataArcadia{
 		super(maxMeta);
 		setUnlocalizedName(References.ID + "_" + name);
 		GameRegistry.registerItem(this, name);
+		setMaxStackSize(1);
 		icons = new IIcon[maxMeta];
 	}
 	

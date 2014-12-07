@@ -9,6 +9,7 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.world.World;
 
 import com.julian001.arcadia.CraftingManagerAnvilArcadia;
@@ -57,6 +58,7 @@ public class ContainerAnvilArcadia extends Container {
 	public void onCraftMatrixChanged(IInventory iinventory) {
 		craftResult.setInventorySlotContents(0, CraftingManagerAnvilArcadia
 				.getInstance().findMatchingRecipe(craftMatrix, worldObj));
+		this.craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
 	}
 //
 //	public void onContainerClosed(EntityPlayer entityplayer) {
