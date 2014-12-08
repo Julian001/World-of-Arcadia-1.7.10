@@ -25,7 +25,7 @@ public class arcadia
 	public static arcadia instance;
 	@SidedProxy(clientSide = References.CLIENT_PROXY_CLASS, serverSide = References.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
-	//public static final PacketPipeline packetPipeline = new PacketPipeline();
+	
 	public static CreativeTabs tabArcadiaBlocks = new CreativeTabArcadia(CreativeTabs.getNextID(), "tabArcadiaBlocks");
 	public static CreativeTabs tabArcadiaItems = new CreativeTabArcadia(CreativeTabs.getNextID(), "tabArcadiaItems");
 	public static CreativeTabs tabArcadiaPotions = new CreativeTabArcadia(CreativeTabs.getNextID(), "tabArcadiaPotions");
@@ -40,7 +40,7 @@ public class arcadia
 		ItemsArcadia.init();
 		Recipes.addRecipes();
 		proxy.registerTileEntities();
-		//System.out.println("####################" + BlocksArcadia.arcadiaBlock.getUnlocalizedName());//.substring(13));
+		proxy.init();
     }
 	
     @EventHandler

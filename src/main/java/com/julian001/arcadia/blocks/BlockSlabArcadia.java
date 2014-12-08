@@ -60,9 +60,14 @@ public class BlockSlabArcadia extends BlockSlab {
 	public int quantityDropped(Random random) {
         return this.field_150004_a ? 2 : 1;
     }
-	//TODO Drop
+	
     public int damageDropped(int meta) {
         return meta & 7;
+    }
+    
+    @Override
+    public Item getItemDropped(int meta, Random random, int fortune) {
+    	return Item.getItemFromBlock(BlocksArcadia.slabArcadia);
     }
     
 	public float getBlockHardness(World world, int x, int y, int z) {

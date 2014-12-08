@@ -16,5 +16,7 @@ public class BlockArcadia extends Block {
 		setBlockName(References.ID + "_" + name);
 		setBlockTextureName(References.ID + ":" + name);
 		GameRegistry.registerBlock(this, name);
+		setHardness(1F);
+		setResistance(10F);
 	}
 }

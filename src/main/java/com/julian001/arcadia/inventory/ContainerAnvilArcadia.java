@@ -56,9 +56,11 @@ public class ContainerAnvilArcadia extends Container {
 	}
 
 	public void onCraftMatrixChanged(IInventory iinventory) {
-		craftResult.setInventorySlotContents(0, CraftingManagerAnvilArcadia
-				.getInstance().findMatchingRecipe(craftMatrix, worldObj));
-		this.craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
+		ItemStack recipe = CraftingManagerAnvilArcadia.getInstance().findMatchingRecipe(craftMatrix, worldObj);
+		if(recipe != null)
+			craftResult.setInventorySlotContents(0, CraftingManagerAnvilArcadia.getInstance().findMatchingRecipe(craftMatrix, worldObj));
+		else
+			craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
 	}
 //
 //	public void onContainerClosed(EntityPlayer entityplayer) {

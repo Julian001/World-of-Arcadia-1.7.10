@@ -94,6 +94,7 @@ public class ItemsArcadia {
     public static Item epicWeaponRuby;
     public static Item epicWeaponSapphire;
     public static Item epicWeaponShadowSteel;
+    public static Item epicWeaponLifeDrain;
 	
     public static Item friedEgg;
     public static Item sushi;
@@ -120,7 +121,7 @@ public class ItemsArcadia {
 		
 		friedEgg = new ItemFoodArcadia("friedEgg", 6, 2F, false);
 		sushi = new ItemFoodArcadia("sushi", 4, 0.4F, false);
-		sushiSoup = new ItemFoodArcadia("sushiSoup", 8, 1.6F, false);
+		sushiSoup = new ItemFoodArcadia("sushiSoup", 8, 1.6F, false).setMaxStackSize(1);
 		cheese = new ItemFoodArcadia("cheese", 3, 0.6F, false);
 		sandwich = new ItemFoodArcadia("sandwich", 10, 2F, true);
 		
@@ -187,6 +188,21 @@ public class ItemsArcadia {
 		epicWeaponRuby = new ItemEpicWeaponArcadia("epicWeaponRuby", toolRUBY);
 		epicWeaponSapphire = new ItemEpicWeaponArcadia("epicWeaponSapphire", toolSAPPHIRE);
 		epicWeaponShadowSteel = new ItemEpicWeaponArcadia("epicWeaponShadowSteel", toolSHADOWSTEEL);
+		epicWeaponLifeDrain = new ItemEpicWeaponArcadia("epicWeaponLifeDrain", toolMYSTICAL);
 		
+		/* TODO
+		 * public Item func_150995_f()
+        {
+            switch (this)
+            {
+                case WOOD:    return Item.getItemFromBlock(Blocks.planks);
+                case STONE:   return Item.getItemFromBlock(Blocks.cobblestone);
+                case GOLD:    return Items.gold_ingot;
+                case IRON:    return Items.iron_ingot;
+                case EMERALD: return Items.diamond;
+                default:      return customCraftingMaterial;
+            }
+        }*/
+		 
 	}
 }

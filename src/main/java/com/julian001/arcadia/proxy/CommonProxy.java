@@ -10,11 +10,13 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class CommonProxy implements IGuiHandler{
 
-	public void registerTileEntities() {
-		 
+	public void registerTileEntities() { 
         GameRegistry.registerTileEntity(TileEntityAnvilArcadia.class, TileEntityAnvilArcadia.publicName);
     }
 
+	public void init() {
+		
+	}
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {

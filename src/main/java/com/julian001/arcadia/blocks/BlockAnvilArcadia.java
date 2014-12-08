@@ -14,6 +14,9 @@ public class BlockAnvilArcadia extends BlockArcadia implements ITileEntityProvid
 
 	public BlockAnvilArcadia(String name) {
 		super(name, Material.iron);
+		setHardness(5.0F);
+		setStepSound(soundTypeAnvil);
+		setResistance(2000.0F);
 	}
 
 	@Override

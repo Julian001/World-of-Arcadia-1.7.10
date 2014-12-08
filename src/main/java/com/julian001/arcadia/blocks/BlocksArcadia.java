@@ -47,7 +47,7 @@ public class BlocksArcadia {
 		arcadiaBlock = new BlockArcadia("arcadiaBlock", Material.rock).setStepSound(Block.soundTypeGlass);
 		oreArcadia = new BlockOreArcadia("oreArcadia", 6);
 		oreBlockArcadia = new BlockOreStorageArcadia("oreBlockArcadia", 7);
-		fenceArcadia = new BlockFenceArcadia2("fenceArcadia", "oreBlockArcadia");
+		fenceArcadia = new BlockFenceArcadia("fenceArcadia", "oreBlockArcadia");
 		wallArcadia = new BlockWallArcadia("wallArcadia", oreBlockArcadia);
 		fenceGateArcadia = new BlockFenceGateArcadia("fenceGateArcadia");
 				
@@ -64,23 +64,11 @@ public class BlocksArcadia {
 		stairSapphire = new BlockStairsArcadia(oreBlockArcadia, 5, "stairSapphire");
 		stairBronze = new BlockStairsArcadia(oreBlockArcadia, 6, "stairBronze");
 		
-		//fenceSilver = new BlockFenceArcadia("fence", Material.iron, 7).setHardness(5.0F);
-		fenceSilver = new BlockFenceArcadia("fenceSilver", "blockSilver", Material.iron).setHardness(5.0F);
-		fenceCopper = new BlockFenceArcadia("fenceCopper", "blockCopper", Material.iron).setHardness(2.5F);
-		fenceTin = new BlockFenceArcadia("fenceTin", "blockTin", Material.iron).setHardness(2.5F);
-		fenceLead = new BlockFenceArcadia("fenceLead", "blockLead", Material.iron).setHardness(2.0F);
-		fenceRuby = new BlockFenceArcadia("fenceRuby", "blockRuby", Material.iron).setHardness(6.0F);
-		fenceSapphire = new BlockFenceArcadia("fenceSapphire", "blockSapphire", Material.iron).setHardness(6.0F);
-		fenceBronze = new BlockFenceArcadia("fenceBronze", "blockBronze", Material.iron).setHardness(5.0F);
-		
-		//wallSilver = new BlockWallArcadia("wallSilver", oreBlockArcadia);
-		
 		anvilArcadia = new BlockAnvilArcadia("anvil");
 		clearGlass = new BlockGlassArcadia("clearGlass", Material.glass, false).setHardness(0.3F);
 		//TODO clearGlassPane = new BlockGlassPaneArcadia("clearGlassPane", "clearGlass", false).setHardness(0.3F);
 		//(new Block Pane("iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("fenceIron"));
 		//(new BlockPane("glass", "glass_pane_top", Material.glass, false)).setHardness(0.3F).setStepSound(soundTypeGlass).setBlockName("thinGlass"));
 		multiOre = new BlockMultiOreArcadia("multiOre");
-		
 	}
 }

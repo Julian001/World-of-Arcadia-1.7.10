@@ -125,6 +125,11 @@ item.arcadia_bootsBronze.name=Bronze Boots
 item.arcadia_bootsRuby.name=§cRuby Boots§r
 item.arcadia_bootsSapphire.name=§bSapphire Boots§r
 item.arcadia_bootsShadowSteel.name=§8Shadow Steel Boots§r
+#EpicWeapons
+item.arcadia_epicWeaponRuby.name=§4Sword of the eternal Flame§r
+item.arcadia_epicWeaponSapphire.name=§bAxe of critical Water Damage§r
+item.arcadia_epicWeaponShadowSteel.name=§8Blade of Shadows§r
+item.arcadia_epicWeaponLifeDrain.name=§5Sword of Lifedrain§r
 
 #Potions
 item.arcadia_potionArcadia.normalHaste.name=Potion of Haste

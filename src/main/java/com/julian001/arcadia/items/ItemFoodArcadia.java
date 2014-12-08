@@ -21,10 +21,13 @@ public class ItemFoodArcadia extends ItemFood {
 	}
 	
 	public ItemStack onEaten(ItemStack itemStack, World world, EntityPlayer player) {
+		player.getFoodStats().func_151686_a(this, itemStack);
+        world.playSoundAtEntity(player, "random.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+        this.onFoodEaten(itemStack, world, player);
         if(itemStack.getItem() == ItemsArcadia.sushiSoup) {
-			super.onEaten(itemStack, world, player);
 	        return new ItemStack(Items.bowl);
         }
-        return null;
+        --itemStack.stackSize;
+        return itemStack;
     }
 }

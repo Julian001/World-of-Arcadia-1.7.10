@@ -16,7 +16,7 @@ public class BlockMetadataArcadia extends Block {
 	public BlockMetadataArcadia(int maxMeta, Material material) {
 		super(material);
 		setResistance(10F);
-		setHardness(10F);
+		setHardness(1F);
 		setCreativeTab(arcadia.tabArcadiaBlocks);
 		this.maxMeta=maxMeta;
 	}

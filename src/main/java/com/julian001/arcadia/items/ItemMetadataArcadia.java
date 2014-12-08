@@ -12,11 +12,9 @@ import com.julian001.arcadia.arcadia;
 public class ItemMetadataArcadia extends Item {
 	
 	private IIcon[] icons;
-	//private int maxMeta;
 	public ItemMetadataArcadia(int maxMeta) {
 		this.setCreativeTab(arcadia.tabArcadiaItems);
 		setHasSubtypes(true);
-		//this.maxMeta = maxMeta;
 		icons = new IIcon[maxMeta];
 	}
 	
