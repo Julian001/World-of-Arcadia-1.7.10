@@ -87,20 +87,20 @@ public class Recipes {
 		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.slabArcadia, 6, 6), new Object[] {
 			"XXX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 6) });
 		//----Fences----//
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceSilver, 6), new Object[] {
-			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 0), 'Y', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceCopper, 6), new Object[] {
-			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 1), 'Y', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceTin, 6), new Object[] {
-			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 2), 'Y', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceLead, 6), new Object[] {
-			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 3), 'Y', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceRuby, 6), new Object[] {
-			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 4), 'Y', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceSapphire, 6), new Object[] {
-			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 5), 'Y', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceBronze, 6), new Object[] {
-			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 6), 'Y', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceArcadia, 6, 0), new Object[] {
+			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 0), 'Y', new ItemStack(ItemsArcadia.ingotArcadia, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceArcadia, 6, 1), new Object[] {
+			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 1), 'Y', new ItemStack(ItemsArcadia.ingotArcadia, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceArcadia, 6, 2), new Object[] {
+			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 2), 'Y', new ItemStack(ItemsArcadia.ingotArcadia, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceArcadia, 6, 3), new Object[] {
+			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 3), 'Y', new ItemStack(ItemsArcadia.ingotArcadia, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceArcadia, 6, 4), new Object[] {
+			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 4), 'Y', new ItemStack(ItemsArcadia.ingotArcadia, 1, 4) });
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceArcadia, 6, 5), new Object[] {
+			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 5), 'Y', new ItemStack(ItemsArcadia.ingotArcadia, 1, 5) });
+		GameRegistry.addRecipe(new ItemStack(BlocksArcadia.fenceArcadia, 6, 6), new Object[] {
+			"XYX", "XYX", 'X', new ItemStack(BlocksArcadia.oreBlockArcadia, 1, 6), 'Y', new ItemStack(ItemsArcadia.ingotArcadia, 1, 6) });
 		//----Food----//
 		GameRegistry.addSmelting(Items.egg, new ItemStack(ItemsArcadia.friedEgg), 0.3F);
 		GameRegistry.addRecipe(new ItemStack(ItemsArcadia.sushi, 2), new Object[] {

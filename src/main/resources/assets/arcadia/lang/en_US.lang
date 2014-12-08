@@ -31,13 +31,13 @@ tile.arcadia_slabRuby.name=§cRuby Slab§r
 tile.arcadia_slabSapphire.name=§bSapphire Slab§r
 tile.arcadia_slabBronze.name=Bronze Slab
 #Fences
-tile.arcadia_fenceSilver.name=Silver Fence
-tile.arcadia_fenceCopper.name=Copper Fence
-tile.arcadia_fenceTin.name=Tin Fence
-tile.arcadia_fenceLead.name=Lead Fence
-tile.arcadia_fenceRuby.name=§cRuby Fence§r
-tile.arcadia_fenceSapphire.name=§bSapphire Fence§r
-tile.arcadia_fenceBronze.name=Bronze Fence
+tile.arcadia_fenceArcadia.Silver.name=Silver Fence
+tile.arcadia_fenceArcadia.Copper.name=Copper Fence
+tile.arcadia_fenceArcadia.Tin.name=Tin Fence
+tile.arcadia_fenceArcadia.Lead.name=Lead Fence
+tile.arcadia_fenceArcadia.Ruby.name=§cRuby Fence§r
+tile.arcadia_fenceArcadia.Sapphire.name=§bSapphire Fence§r
+tile.arcadia_fenceArcadia.Bronze.name=Bronze Fence
 
 tile.arcadia_anvil.name=Anvil
 tile.arcadia_clearGlass.name=Clear Glass
