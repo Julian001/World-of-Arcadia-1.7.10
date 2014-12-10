@@ -24,6 +24,7 @@ public class BlockSlabArcadia extends BlockSlab {
 		setStepSound(Block.soundTypeMetal);
 		setResistance(10F);
 		setBlockName(References.ID + "_" + name);
+		useNeighborBrightness = true;
 	}
 
 	@Override
@@ -33,7 +34,6 @@ public class BlockSlabArcadia extends BlockSlab {
 	
 	@Override
 	public IIcon getIcon(int side, int meta) {
-		//int typemeta = meta & 7;
 		return BlocksArcadia.oreBlockArcadia.getIcon(side, meta & 7);
 	}
 	

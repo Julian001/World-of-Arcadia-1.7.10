@@ -1,4 +1,4 @@
-package com.julian001.arcadia;
+package com.julian001.arcadia.anvil;
 
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;

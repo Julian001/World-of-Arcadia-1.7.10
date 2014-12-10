@@ -139,7 +139,7 @@ public class ItemEpicWeaponArcadia extends ItemSword {
 				}
 			}
 			//float dmg = getDamageVsEntity(par3EntityLiving);
-			float dmg1 = ItemsArcadia.toolSHADOWSTEEL.getDamageVsEntity()/2;
+			float dmg1 = (1 + ItemsArcadia.toolSHADOWSTEEL.getDamageVsEntity()) /2;
 			System.out.println(dmg1);
 			par3EntityLiving.heal(dmg1);
 		}

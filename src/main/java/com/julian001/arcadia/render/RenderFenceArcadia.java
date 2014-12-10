@@ -1,4 +1,4 @@
-package com.julian001.arcadia;
+package com.julian001.arcadia.render;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;

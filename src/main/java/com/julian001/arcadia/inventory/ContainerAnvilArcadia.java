@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.world.World;
 
-import com.julian001.arcadia.CraftingManagerAnvilArcadia;
+import com.julian001.arcadia.anvil.CraftingManagerAnvilArcadia;
 import com.julian001.arcadia.blocks.BlocksArcadia;
 
 public class ContainerAnvilArcadia extends Container {

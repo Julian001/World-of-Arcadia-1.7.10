@@ -25,18 +25,9 @@ public class BlocksArcadia {
 	public static Block stairRuby;
 	public static Block stairSapphire;
 	public static Block stairBronze;
-		
-	public static Block fenceSilver;
-	public static Block fenceCopper;
-	public static Block fenceTin;
-	public static Block fenceLead;
-	public static Block fenceRuby;
-	public static Block fenceSapphire;
-	public static Block fenceBronze;
-	
-	public static Block wallSilver;
 	
 	public static Block anvilArcadia;
+	public static Block mysticalBrewingStand;
 	public static Block clearGlass;
 	public static Block clearGlassPane;
 	public static Block multiOre;
@@ -65,6 +56,7 @@ public class BlocksArcadia {
 		stairBronze = new BlockStairsArcadia(oreBlockArcadia, 6, "stairBronze");
 		
 		anvilArcadia = new BlockAnvilArcadia("anvil");
+		mysticalBrewingStand = new BlockMysticalBrewingStand("mysticalBrewingStand");
 		clearGlass = new BlockGlassArcadia("clearGlass", Material.glass, false).setHardness(0.3F);
 		//TODO clearGlassPane = new BlockGlassPaneArcadia("clearGlassPane", "clearGlass", false).setHardness(0.3F);
 		//(new Block Pane("iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(soundTypeMetal).setBlockName("fenceIron"));
