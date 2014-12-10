@@ -8,6 +8,8 @@ import com.julian001.arcadia.lib.Recipes;
 import com.julian001.arcadia.lib.References;
 import com.julian001.arcadia.proxy.CommonProxy;
 import com.julian001.arcadia.tabs.CreativeTabArcadia;
+import com.julian001.arcadia.tileentities.TileEntityAnvilArcadia;
+import com.julian001.arcadia.tileentities.TileEntityMysticalBrewingStandArcadia;
 import com.julian001.arcadia.world.WorldGeneratorArcadia;
 
 import cpw.mods.fml.common.Mod;
@@ -35,11 +37,12 @@ public class arcadia
     {
 		GameRegistry.registerWorldGenerator(new WorldGeneratorArcadia(), 1);
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+		GameRegistry.registerTileEntity(TileEntityAnvilArcadia.class, References.ID + ".TileEntityAnvilArcadia");
+		GameRegistry.registerTileEntity(TileEntityMysticalBrewingStandArcadia.class, References.ID + ".TileEntityMysticalBrewingStandArcadia");
 		
 		BlocksArcadia.init();
 		ItemsArcadia.init();
 		Recipes.addRecipes();
-		proxy.registerTileEntities();
 		proxy.init();
     }
 	

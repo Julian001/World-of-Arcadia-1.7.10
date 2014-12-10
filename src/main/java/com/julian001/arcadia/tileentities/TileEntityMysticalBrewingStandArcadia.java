@@ -10,7 +10,8 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityMysticalBrewingStandArcadia extends TileEntity implements ISidedInventory {
 
-	ItemStack[] inventoryItemStack = new ItemStack[3];
+	ItemStack[] inventoryItemStack = new ItemStack[2];
+	private int fuelTime;
 	
 	@Override
 	public int getSizeInventory() {
@@ -134,5 +135,22 @@ public class TileEntityMysticalBrewingStandArcadia extends TileEntity implements
 			}
 		}
 		return false;
+	}
+
+	public boolean hasFuel() {
+		return inventoryItemStack[0] != null && inventoryItemStack[0].stackSize > 0 && inventoryItemStack[0].getItem() == ItemsArcadia.mysticalPowder;
+	}
+	
+	@Override
+	public void updateEntity() {
+		if(fuelTime > 0) {
+			fuelTime--;
+			//rezepte
+		}
+		
+		if(fuelTime == 0 && hasFuel()) {
+			fuelTime = fuelTime + 4 * 20;
+			decrStackSize(0, 1);
+		}
 	}
 }

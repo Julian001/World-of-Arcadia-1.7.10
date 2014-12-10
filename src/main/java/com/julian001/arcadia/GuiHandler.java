@@ -6,8 +6,10 @@ import net.minecraft.world.World;
 import com.julian001.arcadia.blocks.BlocksArcadia;
 import com.julian001.arcadia.gui.GuiAnvilArcadia;
 import com.julian001.arcadia.gui.GuiBagArcadia;
+import com.julian001.arcadia.gui.GuiMysticalBrewingStandArcadia;
 import com.julian001.arcadia.inventory.ContainerAnvilArcadia;
 import com.julian001.arcadia.inventory.ContainerBagArcadia;
+import com.julian001.arcadia.inventory.ContainerMysticalBrewingStandArcadia;
 import com.julian001.arcadia.inventory.InventoryBagArcadia;
 import com.julian001.arcadia.lib.GUIs;
 
@@ -19,23 +21,16 @@ public class GuiHandler implements IGuiHandler {
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		GUIs gui = GUIs.values()[ID];
 		switch(gui) {
-			case ANVILARCADIA: return ID == GUIs.ANVILARCADIA.ordinal() && world.getBlock(x, y, z) == BlocksArcadia.anvilArcadia ? new ContainerAnvilArcadia(player.inventory, world, x, y, z) : null;
+			case ANVILARCADIA: return world.getBlock(x, y, z) == BlocksArcadia.anvilArcadia ? new ContainerAnvilArcadia(player.inventory, world, x, y, z) : null;
 			case BAG: { InventoryBagArcadia inv = getInventory(x, player);
 				if(inv == null) {
 					return null;
 				}
 				return new ContainerBagArcadia(player.inventory, inv);
 			}
+			case BREWINGSTAND: return world.getBlock(x, y, z) == BlocksArcadia.mysticalBrewingStand ? new ContainerMysticalBrewingStandArcadia(player.inventory, world, x, y, z) : null;
 			default: return null;
 		}
-//		if(ID == GUIs.BAG.ordinal()) {
-//			InventoryBagArcadia inv = getInventory(x, player);
-//			if(inv == null) {
-//				return null;
-//			}
-//			return new ContainerBagArcadia(player.inventory, inv);
-//		}
-//		else return null;
 	}
 
 	@Override
@@ -50,6 +45,7 @@ public class GuiHandler implements IGuiHandler {
 					}
 					return new GuiBagArcadia(new ContainerBagArcadia(player.inventory, inv));
 				}
+		    case BREWINGSTAND: return world.getBlock(x, y, z) == BlocksArcadia.mysticalBrewingStand ? new GuiMysticalBrewingStandArcadia(player.inventory, world, x, y, z) : null;
 		    default: return null;
 		}
 	}
